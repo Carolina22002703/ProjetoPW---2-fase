@@ -1,0 +1,4 @@
+Ola 1
+Adeus 2
+Amanha 3
+Anteontem 4
