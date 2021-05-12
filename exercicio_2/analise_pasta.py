@@ -20,22 +20,22 @@ def faz_calculos(pasta):
         if(i.endswith(".xlsx")):
             count += 1
             if os.path.isfile(os.path.join(pasta,i)):
-                volume = os.path.getsize(os.path.join(pasta, i))
+                volume = (os.path.getsize(os.path.join(pasta, i))/2**20)
             dic_info["xlsx"] = {'volume': volume, 'quantidade:': count}
         elif(i.endswith(".pdf")):
             count1 += 1
             if os.path.isfile(os.path.join(pasta,i)):
-                volume1 = os.path.getsize(os.path.join(pasta, i))
+                volume1 = (os.path.getsize(os.path.join(pasta, i))/2**20)
             dic_info["pdf"] = {'volume': volume1, 'quantidade:': count1}
         elif(i.endswith(".png")):
             count2 += 1
             if os.path.isfile(os.path.join(pasta,i)):
-                volume2 = os.path.getsize(os.path.join(pasta, i))
+                volume2 = (os.path.getsize(os.path.join(pasta, i))/2**20)
             dic_info["png"] = {'volume': volume2, 'quantidade:': count2}
         elif(i.endswith(".docx")):
             count3 += 1
             if os.path.isfile(os.path.join(pasta,i)):
-                volume3 = os.path.getsize(os.path.join(pasta, i))
+                volume3 = (os.path.getsize(os.path.join(pasta, i))/2**20)
             dic_info["docx"] = {'volume': volume3, 'quantidade:': count3}
         
     print(dic_info)
