@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laboratório 6</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+    </head>
+
+    <body>
+
+    <header class="jumbotron text-center">
+        <h1>Experimentar Pycharm</h1>
+        <p>Primeira interação com Django</p>
+        <nav>
+            <a href="home.html" class="btn btn-info">Home</a>
+            <a href="sobre.html" class="btn btn-info">Sobre</a>
+            <a href="outraPagina.html" class="btn btn-info">Outra Página</a>
+        </nav>
+    </header>
+
+    <article class="container">
+        <main class="col-sm-6">
+            {% block main %}
+            {% endblock main %}
+        </main>
+        <aside class="col-sm-6">
+            {% load static %}
+            <img src="{% static 'website/images/imagem.jpg' %}">
+
+        </aside>
+    </article>
+
+    <footer>
+        <p>Universidade Lusófona de Humanidades e Tecnologias</p>
+    </footer>
+
+    </body>
+</html>
