@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Website sobre os 3 melhores restaurantes do mundo">
-  <meta name="keywords" content="Mirazur, El Celler de Can Roca, Noma">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "ProjetoPW/base.html" %}
 
-  <title>Gastronomia no mundo</title>
+{% load static %}
 
-  <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
-  <link rel="stylesheet" href="estilos1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+{% block head %}
     <style>
         .parallax {
-            background-image: url(images/fundo.jpg);
+            background-image: url('{% static "ProjetoPW/images/fundo.jpg" %}');
             min-height: 500px;
             background-attachment: fixed;
             background-position: center;
@@ -56,35 +47,27 @@
             width: 100%;
         }
     </style>
-</head>
-
-<body>
+{% endblock head %}
 
     <div class="parallax"></div>
 
      <!--Nav-->
-     <div class="nav">
-         <nav>
-            <a href="informacao.html" target="_blank">&#10067; Informações </a>
-            <a href="formulario.html" target="_blank">&#128203; Formulário </a>
-            <b><a href="mapa.html" target="_blank">🗺️ Mapa do Website</a></b>
-            <a href="index.html" target="_blank">&#128281; Home </a>
-        </nav>
-    </div>
+{% block nav %}
+    <a href="informacao.html" target="_blank">&#10067; Informações </a>
+    <a href="formulario.html" target="_blank">&#128203; Formulário </a>
+    <b><a href="mapa.html" target="_blank">🗺️ Mapa do Website</a></b>
+    <a href="index.html" target="_blank">&#128281; Home </a>
+{% endblock nav %}
+
 
     <!--Header-->
-    <div class="header">
-        <header>
-            <h1>Mapa do Website</h1>
-        </header>
-    </div>
+{% block header %}
+    <h1>Mapa do Website</h1>
+{% endblock header %}
 
-
-    <div class="grid-container">
-
-        <!--Conteúdo Principal-->
-        <div class="main" style="min-width: 100%;">
-            <main>
+        <!--Main-->
+{% block main %}
+    <main style="min-width: 100%;">
                 <ul>
                     <li><a href="#"> Mirazur</a>
                         <ul>
@@ -120,18 +103,8 @@
 
                 </ul>
         </main>
-        </div>
-
-    </div>
-
+{% endblock main %}
 
     <div class="parallax"></div>
 
-   <!--Footer-->
-    <div class="footer">
-        <footer>
-            <p> Universade Lusófona de Humanidades e Tecnologias </p>
-        </footer>
-    </div>
-</body>
-</html>
+

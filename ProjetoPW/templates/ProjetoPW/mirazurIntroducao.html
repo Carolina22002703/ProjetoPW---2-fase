@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Website sobre os 3 melhores restaurantes do mundo">
-    <meta name="keywords" content="Mirazur, El Celler de Can Roca, Noma">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "ProjetoPW/base.html" %}
 
-    <title>Gastronomia no mundo</title>
+{% load static %}
 
-    <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
-    <link rel="stylesheet" href="estilos1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
-
+{% block head %}
     <style>
         .parallax {
-            background-image: url(images/mirazur/capa.jpg);
+            background-image: url('{% static "ProjetoPW/images/mirazur/capa.jpg" %}');
             min-height: 500px;
             background-attachment: fixed;
             background-position: center;
@@ -70,189 +59,170 @@
         border-radius: 50px;
         }
     </style>
-</head>
+{% endblock head %}
 
-<body>
     <div class="parallax"></div>
 
-    <div class="nav">
-        <nav>
-            <b><a href="mirazurIntroducao.html"> Apresentação </a></b>
-            <a href="mirazurPinteresse.html"> Pontos de Interesse </a>
-            <a href="mirazurCozinha.html"> Cozinha </a>
-            <a href="index.html"> Home </a>
-        </nav>
-    </div>
+    <!--Nav-->
+{% block nav %}
+    <a href="mirazurIntroducao.html"> Apresentação </a>
+    <b><a href="mirazurPinteresse.html"> Pontos de Interesse </a></b>
+    <a href="mirazurCozinha.html"> Cozinha </a>
+    <a href="index.html"> Home </a>
+{% endblock nav %}
 
-    <div class="header">
-        <header>
-            <h1>Mirazur</h1>
-        </header>
-    </div>
+    <!--Header-->
+{% block header %}
+     <h1>Mirazur</h1>
+{% endblock header %}
 
-    <div class="itemAuxiliar">
-        <div class="row1">
-            <div class="column" style="background-color: rgba(43, 129, 226, 0.87);">
-            <br>
-            <center><i class="fa fa-user" style="font-size:4vw;color: rgb(238, 238, 238);"></i></center>
-            <br>
-            <h3>Comentários do Restaurante</h3>
-            <center><p>Alguns comentários</p></center>
-            <center><a href="#article">Clique aqui</a></center>
-            </div>
+    <!--Item Auxiliar-->
+{% block itemAuxiliar %}
+    <div class="row1">
+        <div class="column" style="background-color: rgba(43, 129, 226, 0.87);">
+        <br>
+        <i class="fa fa-user" style="font-size:4vw;color: rgb(238, 238, 238);"></i>
+        <br>
+        <h3>Comentários do Restaurante</h3>
+        <p>Alguns comentários</p>
+        <a href="#article">Clique aqui</a>
+        </div>
 
-            <div class="column" style="background-color: rgb(31, 95, 138);">
-            <br>
-            <center><i class="fa fa-phone" style="font-size:4vw;color:rgb(238, 238, 238)"></i></center>
-            <br>
-            <h3>Se Prenteder Reservar</h3>
-            <center><p>Seja rápido e reserve aqui</p></center>
-            <center><a href="#aside">Clique aqui</a></center>
-            </div>
+        <div class="column" style="background-color: rgb(31, 95, 138);">
+        <br>
+        <i class="fa fa-phone" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+        <br>
+        <h3>Se Prenteder Reservar</h3>
+        <p>Seja rápido e reserve aqui</p>
+        <a href="#aside">Clique aqui</a>
+        </div>
 
-            <div class="column" style="background-color: rgba(32, 141, 204, 0.884);">
-            <br>
-            <center><i class="fa fa-map-pin" style="font-size:4vw;color:rgb(238, 238, 238)"></i></center>
-            <br>
-            <h3>Descobra Onde Se Localiza</h3>
-            <center><p>Faça a ligação rapidamente</p></center>
-            <center><a href="#section">Clique aqui</a></center>
-            </div>
+        <div class="column" style="background-color: rgba(32, 141, 204, 0.884);">
+        <br>
+        <i class="fa fa-map-pin" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+        <br>
+        <h3>Descobra Onde Se Localiza</h3>
+        <p>Faça a ligação rapidamente</p>
+        <a href="#section">Clique aqui</a>
+        </div>
 
-            <div class="column" style="background-color: rgba(18, 86, 150, 0.87);">
-            <br>
-            <center><i style="font-size:4vw;color: rgb(238, 238, 238);" class="fa">&#xf002;</i></center>
-            <br>
-            <h3>Acerca do Restaurante</h3>
-            <center><p>Descobra mais </p></center>
-            <center><a href="#main">Clique aqui</a></center>
+        <div class="column" style="background-color: rgba(18, 86, 150, 0.87);">
+        <br>
+        <i style="font-size:4vw;color: rgb(238, 238, 238);" class="fa">&#xf002;</i>
+        <br>
+        <h3>Acerca do Restaurante</h3>
+        <p>Descobra mais </p>
+        <a href="#main">Clique aqui</a>
 
-            </div>
-          </div>
-    </div>
-
-
-    <div class="grid-container">
+        </div>
+      </div>
+{% endblock itemAuxiliar %}
 
         <!--Section-->
-        <div class="section">
-        <section>
-            <div id="section">
-                <img src="images/mirazur/mirazur.22.jfif" class="img">
-                <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fs2.glbimg.com%2FI7yOa5cMnkg2bbKTnISa7-vFMmM%3D%2Fsmart%2Fe.glbimg.com%2Fog%2Fed%2Ff%2Foriginal%2F2019%2F08%2F28%2Fgq098_12-gosto-mirazur-02.png&imgrefurl=https%3A%2F%2Fgq.globo.com%2FPrazeres%2FGastronomia%2Fnoticia%2F2019%2F09%2F10-curiosidades-sobre-o-mirazur-lar-do-melhor-chef-do-mundo.html&tbnid=J9UUrcSvrydZ8M&vet=10CAIQxiAoAGoXChMI6Nz5oKLa7wIVAAAAAB0AAAAAEAc..i&docid=uKLiW8ha5_l0WM&w=2000&h=2965&q=mirazur%20vista&hl=pt-PT&ved=0CAIQxiAoAGoXChMI6Nz5oKLa7wIVAAAAAB0AAAAAEAc"><figcaption class="none">Vista das Montanhas</figcaption></a>
-                <center><details>
-                    <summary>Saber mais</summary>
-                    <p>A vista nas montanhas, a Natureza que rodeia este Restaurante tornam a experiência ainda mais agradável para os clientes. Além da refeição, o Mirazur oferece aos clientes uma visita guiada aos jardins mais próximos do restaurante pelo jardineiro-chefe. Este passeio tem como objetivo provocar um momento de reflexão e diálogo sobre a forma de cultivar,  as características do nosso lugar, as novas e antigas variedades.    </p>
-                </details></center>
-                <br><br>
+{% block section %}
+    <div id="section">
+        <img src='{% static "ProjetoPW/images/mirazur/mirazur.22.jfif" %}' class="img" alt="">
+        <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fs2.glbimg.com%2FI7yOa5cMnkg2bbKTnISa7-vFMmM%3D%2Fsmart%2Fe.glbimg.com%2Fog%2Fed%2Ff%2Foriginal%2F2019%2F08%2F28%2Fgq098_12-gosto-mirazur-02.png&imgrefurl=https%3A%2F%2Fgq.globo.com%2FPrazeres%2FGastronomia%2Fnoticia%2F2019%2F09%2F10-curiosidades-sobre-o-mirazur-lar-do-melhor-chef-do-mundo.html&tbnid=J9UUrcSvrydZ8M&vet=10CAIQxiAoAGoXChMI6Nz5oKLa7wIVAAAAAB0AAAAAEAc..i&docid=uKLiW8ha5_l0WM&w=2000&h=2965&q=mirazur%20vista&hl=pt-PT&ved=0CAIQxiAoAGoXChMI6Nz5oKLa7wIVAAAAAB0AAAAAEAc"><figcaption class="none">Vista das Montanhas</figcaption></a>
+        <details>
+            <summary>Saber mais</summary>
+            <p>A vista nas montanhas, a Natureza que rodeia este Restaurante tornam a experiência ainda mais agradável para os clientes. Além da refeição, o Mirazur oferece aos clientes uma visita guiada aos jardins mais próximos do restaurante pelo jardineiro-chefe. Este passeio tem como objetivo provocar um momento de reflexão e diálogo sobre a forma de cultivar,  as características do nosso lugar, as novas e antigas variedades.    </p>
+        </details>
+        <br><br>
 
-                <div class="reserva">
-                    <div class="reserva_header">
-                    <img src="images/mirazur/mirazur_local.png" alt="mapa" class="img">
-                    </div>
-                    <div class="reserva_middle">
-                    <h2 class="reserva_middle_name"> Localização </h2>
-                    </div>
-                    <p class="reserva_texto"><b>&#127860; Chefe de Cozinha:</b> Mauro Colagreco </p>
-                    <p class="reserva_texto"><b>&#127759; País:</b> França</p>
-                    <p class="reserva_texto"><b>&#128172; Reservas:</b> Essencial</p>
-                </div>
+        <div class="reserva">
+            <div class="reserva_header">
+            <img src='{% static "ProjetoPW/images/mirazur/mirazur_local.png" %}' alt="mapa" class="img">
             </div>
-        </section>
-        </div>
-
-        <div class="main">
-        <main>
-            <div id="main">
-                <h2> Sobre... </h2>
-
-                <p> &ensp;Sobre as montanhas, com vista para o mar, perto da fronteira com Itália, encontramos o abrigo de Mirazur.</p>
-                <p> <center><b style="color: rgb(12, 12, 78);">Imerso numa vegetação exuberante, oferece um cenário idílico. &#128562;</b></center></p>
-                <p> &ensp; A espaçosa, elegante e luminosa sala de jantar envolve o mar a perder de vista a cidade de Menton através de uma longa baía circular.</p>
-
-                <center><figure><img src="images/mirazur/vista.mirazur4.jpg" id="circular" class="img"></figure></center>
-                <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.unibanco.pt%2Fblog%2Fviagens-e-lazer%2Fmirazur-o-novo-melhor-restaurante-do-mundo%2F&psig=AOvVaw3ZtHVTN5BHr4Yj0WaAg5B5&ust=1618145948875000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCLDV_sfd8-8CFQAAAAAdAAAAABAD"><figcaption class="none">Restaurante</figcaption></a>
-
-                <p> &ensp; O restaurante francês, Mirazur, tem ⭐⭐⭐ Michelin. Foi premiado com o cobiçado título de Melhor Restaurante do Mundo e Melhor Restaurante da Europa, no ano de 2019.</p>
-                <p> &ensp; o prêmio <a href="https://www.theworlds50best.com/"> World’s 50 Best Restaurants</a> em 2019 concedido ao restaurante francês dirigido pelo <a href="mirazur2.html"><b>chef Mauro Colagreco</b></a> foi revelado durante uma cerimônia realizada no <a href="https://www.marinabaysands.com/">Marina Bay Sands</a>, em Singapura, com a presença de chefs famosos de todo o mundo. Esta é a primeira vez nos 18 anos de história da premiação que um restaurante francês recebe a maior condecoração.</p>
-
-                <div class="linha">
-                    <figure><img src="images/mirazur/mirazur_vista1.jpg"  id="half_circulo" class="img"></figure>
-                    <a href="https://man-man.nl/dit-zijn-de-10-beste-restaurants-van-de-wereld/"><figcaption class="none">Vista</figcaption></a>
-                    <figure><img src="images/mirazur/mirazur.23.jpg"  id="half_circulo" class="img"></figure>
-                    <a href="https://www.reciclasampa.com.br/artigo/guia-michelin-passa-a-apontar-restaurantes-sustentaveis-pelo-mundo"><figcaption class="none">Práticas sustentáveis</figcaption></a>
-                </div>
+            <div class="reserva_middle">
+            <h2 class="reserva_middle_name"> Localização </h2>
             </div>
-        </main>
+            <p class="reserva_texto"><b>&#127860; Chefe de Cozinha:</b> Mauro Colagreco </p>
+            <p class="reserva_texto"><b>&#127759; País:</b> França</p>
+            <p class="reserva_texto"><b>&#128172; Reservas:</b> Essencial</p>
         </div>
+    </div>
+{% endblock section %}
+
+        <!--Main-->
+{% block main %}
+    <div id="main">
+        <h2> Sobre... </h2>
+
+        <p> &ensp;Sobre as montanhas, com vista para o mar, perto da fronteira com Itália, encontramos o abrigo de Mirazur.</p>
+        <p><b style="color: rgb(12, 12, 78);">Imerso numa vegetação exuberante, oferece um cenário idílico. &#128562;</b></p>
+        <p> &ensp; A espaçosa, elegante e luminosa sala de jantar envolve o mar a perder de vista a cidade de Menton através de uma longa baía circular.</p>
+
+        <figure><img src='{% static "ProjetoPW/images/mirazur/vista.mirazur4.jpg" %}' id="circular" class="img" alt=""></figure>
+        <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.unibanco.pt%2Fblog%2Fviagens-e-lazer%2Fmirazur-o-novo-melhor-restaurante-do-mundo%2F&psig=AOvVaw3ZtHVTN5BHr4Yj0WaAg5B5&ust=1618145948875000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCLDV_sfd8-8CFQAAAAAdAAAAABAD"><figcaption class="none">Restaurante</figcaption></a>
+
+        <p> &ensp; O restaurante francês, Mirazur, tem ⭐⭐⭐ Michelin. Foi premiado com o cobiçado título de Melhor Restaurante do Mundo e Melhor Restaurante da Europa, no ano de 2019.</p>
+        <p> &ensp; o prêmio <a href="https://www.theworlds50best.com/"> World’s 50 Best Restaurants</a> em 2019 concedido ao restaurante francês dirigido pelo <a href="mirazur2.html"><b>chef Mauro Colagreco</b></a> foi revelado durante uma cerimônia realizada no <a href="https://www.marinabaysands.com/">Marina Bay Sands</a>, em Singapura, com a presença de chefs famosos de todo o mundo. Esta é a primeira vez nos 18 anos de história da premiação que um restaurante francês recebe a maior condecoração.</p>
+
+        <div class="linha">
+            <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur_vista1.jpg" %}' id="half_circulo" class="img" alt=""></figure>
+            <a href="https://man-man.nl/dit-zijn-de-10-beste-restaurants-van-de-wereld/"><figcaption class="none">Vista</figcaption></a>
+            <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur.23.jpg" %}'  id="half_circulo" class="img" alt=""></figure>
+            <a href="https://www.reciclasampa.com.br/artigo/guia-michelin-passa-a-apontar-restaurantes-sustentaveis-pelo-mundo"><figcaption class="none">Práticas sustentáveis</figcaption></a>
+        </div>
+    </div>
+{% endblock main %}
 
         <!--Aside-->
-        <div class="aside">
-        <aside>
-            <div id="aside">
-                <div class="reserva">
-                    <div class="reserva_header">
-                    <img src="images/mirazur/mirazur_logo.jpg" class="img">
-                    </div>
-                    <div class="reserva_middle">
-                    <h2 class="reserva_middle_name"> Reserva </h2>
-                    </div>
-                    <p class="reserva_texto"> O sistema de reservas online permite verificar a disponibilidade e efetuar a reserva. </p>
-                    <p class="reserva_texto"><b>&#128241; Telemóvel: +33 492 418 686</b></p>
-                    <p class="reserva_texto"><b>&#9993; Email:</b> events@mirazur.fr</p>
-                    <p class="reserva_texto"><b>&#127759; Localização:</b> <a href="https://www.google.pt/maps?q=mirazur&sxsrf=ALeKk00vebiScvBgnVa1GzRL8LjoZt6rtg:1617983614875&iflsig=AINFCbYAAAAAYHCGjhWfFDiLZjXXaKI4nbNO630mNsfL&gs_lcp=Cgdnd3Mtd2l6EAMYAjIGCCMQJxATMgQIIxAnMgQIIxAnMggIABCxAxCDATIFCAAQsQMyBQguELEDMgsIABCxAxDHARCjAjICCAAyCwgAELEDEMcBEKMCMgsIABCxAxDHARCvAToHCCMQ6gIQJzoJCCMQ6gIQJxATOgkILhDqAhAnEBM6BwguEOoCECc6DggAELEDEIMBEMcBEKMCOgIILjoICC4QsQMQgwFQvQxY7RZgtSVoAnAAeACAAX6IAc0CkgEDMC4zmAEAoAEBqgEHZ3dzLXdperABCg&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjYktHXwvHvAhV1mVwKHTuUBGoQ_AUoAnoECAEQBA">Google Maps</a></p>
-                    <p class="reserva_texto"><b>&#127760; Site:</b> <a href="https://www.mirazur.fr/le-restaurant.php#univers">Clique aqui</a></p>
-                    <br>
-                    <center><a href="https://www.mirazur.fr/reserver.php"><button style="font-size:1vw;color: rgb(160, 139, 139);">Clique para reservar <i class="fa fa-calendar-check-o"></i></button></a></center>
-                    <br>
-                </div>
+{% block aside %}
+    <div id="aside">
+        <div class="reserva">
+            <div class="reserva_header">
+            <img src='{% static "ProjetoPW/images/mirazur/mirazur_logo.jpg" %}' class="img" alt="">
             </div>
-        </aside>
+            <div class="reserva_middle">
+            <h2 class="reserva_middle_name"> Reserva </h2>
+            </div>
+            <p class="reserva_texto"> O sistema de reservas online permite verificar a disponibilidade e efetuar a reserva. </p>
+            <p class="reserva_texto"><b>&#128241; Telemóvel: +33 492 418 686</b></p>
+            <p class="reserva_texto"><b>&#9993; Email:</b> events@mirazur.fr</p>
+            <p class="reserva_texto"><b>&#127759; Localização:</b> <a href="https://www.google.pt/maps?q=mirazur&sxsrf=ALeKk00vebiScvBgnVa1GzRL8LjoZt6rtg:1617983614875&iflsig=AINFCbYAAAAAYHCGjhWfFDiLZjXXaKI4nbNO630mNsfL&gs_lcp=Cgdnd3Mtd2l6EAMYAjIGCCMQJxATMgQIIxAnMgQIIxAnMggIABCxAxCDATIFCAAQsQMyBQguELEDMgsIABCxAxDHARCjAjICCAAyCwgAELEDEMcBEKMCMgsIABCxAxDHARCvAToHCCMQ6gIQJzoJCCMQ6gIQJxATOgkILhDqAhAnEBM6BwguEOoCECc6DggAELEDEIMBEMcBEKMCOgIILjoICC4QsQMQgwFQvQxY7RZgtSVoAnAAeACAAX6IAc0CkgEDMC4zmAEAoAEBqgEHZ3dzLXdperABCg&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjYktHXwvHvAhV1mVwKHTuUBGoQ_AUoAnoECAEQBA">Google Maps</a></p>
+            <p class="reserva_texto"><b>&#127760; Site:</b> <a href="https://www.mirazur.fr/le-restaurant.php#univers">Clique aqui</a></p>
+            <br>
+            <a href="https://www.mirazur.fr/reserver.php"><button style="font-size:1vw;color: rgb(160, 139, 139);">Clique para reservar <i class="fa fa-calendar-check-o"></i></button></a>
+            <br>
         </div>
+    </div>
+{% endblock aside %}
 
         <!--Article-->
-        <div class="article">
-        <article>
-            <div id="article">
-                <!-- Caixa com citações -->
-                <div class="caixa1">
-                    <p class="caixa_texto"> <center><i>“A escolha do Mirazur é um testemunho do amor do chef Colagreco por produtos locais, a maioria cultivada no jardim de três andares do restaurante, a poucos metros da sala de jantar, complementada por um deslumbrante cenário da Riviera Francesa”</i>, explicaram os organizadores.</center></p>
-                </div>
-                <div class="caixa1">
-                    <p class="caixa_texto"> <center><i>“Estamos empolgados por ver o Mirazur ocupar o topo, em 2019, após sua estreia na lista em 2009, na 35ª posição. É brilhante testemunhar seu progresso”,</i> disse William Drew, diretor de conteúdo da publicação  <i>“The World’s 50 Best Restaurants”. “Este ano de 2019 foi um ano maravilhoso e de progresso para a lista como um todo, com tantas novas participações de todos os cantos do mundo.</i></center></p>
-                </div>
-
-                <br><br>
-                <h2>&#128106; Comentários</h2>
-                <div class="linha">
-                    <figure><img src="images/mirazur/mirazur_comentario1.png" class="img"></figure>
-                    <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!3m1!4b1!4m5!3m4!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069"><figcaption class="none">Avaliação</figcaption></a>
-
-                <figure><img src="images/mirazur/mirazur_comentario2.png" class="img"></figure>
-                <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!4m7!3m6!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069!9m1!1b1"><figcaption class="none">Avaliação</figcaption></a>
-
-
-                <figure><img src="images/mirazur/mirazur_comentario3.png" class="img"></figure>
-                <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!4m7!3m6!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069!9m1!1b1"><figcaption class="none">Avaliação</figcaption></a>
-
-                </div>
-            </div>
-        </article>
+{% block article %}
+    <div id="article">
+        <!-- Caixa com citações -->
+        <div class="caixa1">
+            <p class="caixa_texto"><i>“A escolha do Mirazur é um testemunho do amor do chef Colagreco por produtos locais, a maioria cultivada no jardim de três andares do restaurante, a poucos metros da sala de jantar, complementada por um deslumbrante cenário da Riviera Francesa”</i>, explicaram os organizadores.</p>
+        </div>
+        <div class="caixa1">
+            <p class="caixa_texto"><i>“Estamos empolgados por ver o Mirazur ocupar o topo, em 2019, após sua estreia na lista em 2009, na 35ª posição. É brilhante testemunhar seu progresso”,</i> disse William Drew, diretor de conteúdo da publicação  <i>“The World’s 50 Best Restaurants”. “Este ano de 2019 foi um ano maravilhoso e de progresso para a lista como um todo, com tantas novas participações de todos os cantos do mundo.</i></p>
         </div>
 
+        <br><br>
+        <h2>&#128106; Comentários</h2>
+        <div class="linha">
+            <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur_comentario1.png"%}' class="img" alt=""></figure>
+            <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!3m1!4b1!4m5!3m4!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069"><figcaption class="none">Avaliação</figcaption></a>
+
+        <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur_comentario2.png" %}' class="img" alt=""></figure>
+        <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!4m7!3m6!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069!9m1!1b1"><figcaption class="none">Avaliação</figcaption></a>
+
+
+        <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur_comentario3.png" %}' class="img" alt=""></figure>
+        <a href="https://www.google.pt/maps/place/Mirazur/@43.7859237,7.5258803,17z/data=!4m7!3m6!1s0x12cdec097ad9c09b:0x970320ed1eeb6f98!8m2!3d43.7859237!4d7.528069!9m1!1b1"><figcaption class="none">Avaliação</figcaption></a>
+
+        </div>
     </div>
+{% endblock article %}
 
     <div class="parallax"></div>
 
-    <div class="footer">
-        <footer>
-            <p> Universade Lusófona de Humanidades e Tecnologias </p>
-            <div class="redes_sociais">
-                <a href="https://www.instagram.com/restaurantmirazur/?hl=pt" target="_blank"><span class="instagram"></span>Instagram</a>
-                <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
-            </div>
-        </footer>
+        <!--Footer-->
+{% block footer %}
+    <div class="redes_sociais">
+        <a href="https://www.instagram.com/restaurantmirazur/?hl=pt" target="_blank"><span class="instagram"></span>Instagram</a>
+        <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
     </div>
-
-</body>
-</html>
+{% endblock footer %}

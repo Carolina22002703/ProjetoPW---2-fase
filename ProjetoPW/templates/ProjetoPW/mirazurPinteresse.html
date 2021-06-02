@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Website sobre os 3 melhores restaurantes do mundo">
-  <meta name="keywords" content="Mirazur, El Celler de Can Roca, Noma">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "ProjetoPW/base.html" %}
 
-  <title>Gastronomia no mundo</title>
+{% load static %}
 
-  <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
-  <link rel="stylesheet" href="estilos1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+{% block head %}
     <style>
       .parallax {
-            background-image: url(images/mirazur/capa.jpg);
+            background-image: url('{% static "ProjetoPW/images/mirazur/capa.jpg" %}');
             min-height: 500px;
             background-attachment: fixed;
             background-position: center;
@@ -54,220 +45,202 @@
             background-color: rgb(31, 95, 138);
         }
     </style>
-</head>
-<body>
+{% endblock head %}
 
     <div class="parallax"></div>
 
     <!--Nav-->
-    <div class="nav">
-      <nav>
-        <a href="mirazurIntroducao.html"> Apresentação </a>
-        <b><a href="mirazurPinteresse.html"> Pontos de Interesse </a></b>
-        <a href="mirazurCozinha.html"> Cozinha </a>
-        <a href="index.html"> Home </a>
-      </nav>
-    </div>
+{% block nav %}
+    <a href="mirazurIntroducao.html"> Apresentação </a>
+    <b><a href="mirazurPinteresse.html"> Pontos de Interesse </a></b>
+    <a href="mirazurCozinha.html"> Cozinha </a>
+    <a href="index.html"> Home </a>
+{% endblock nav %}
 
     <!--Header-->
-    <div class="header">
-      <header>
-          <h1>Mirazur</h1>
-      </header>
-    </div>
+{% block header %}
+     <h1>Mirazur</h1>
+{% endblock header %}
 
     <!--Item Auxiliar-->
-    <div class="itemAuxiliar">
-        <div class="row1" >
+{% block itemAuxiliar %}
+     <div class="row1" >
           <div class="columnPInteresse" style="background-color: rgb(31, 95, 138);">
           <br>
-          <center><i class="fa fa-map-pin" style="font-size:2vw;color: rgb(238, 238, 238);"></i><b style="color:white">Menton</b></center>
+          <i class="fa fa-map-pin" style="font-size:2vw;color: rgb(238, 238, 238);"></i><b style="color:white">Menton</b>
           <br>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-container">
+          </div>
+     </div>
+{% endblock itemAuxiliar %}
 
         <!--Conteúdo Principal // Main-->
-        <div class="main" style="text-align: justify;">
-          <main>
-            <p>&ensp;Na cidade de Menton está localizado o Restaurante <b>Mirazur</b>. Esta &#127750; situa-se em França quase na fronteira com Itália. </p>
-            <p>&ensp;Menton, tem cerca de 28 858 &#128109;&#128108;&#128107; e uma área total de 14,05 quilometros quadrados. Uma das principais razões por cidade ser conhecida é pelo seu bom clima &#9728;, que faz com que seja um ótimo  &#128205; para passar férias.</p>
-            <p>&enspEsta cidade apresenta uma variedade de 🏩, <a href="#ficar"><u>caso pretenda ficar alojado</u></a>, bem como vistas incriveis da 🌲, <a href="#explorar"><u>caso pretenda explorar</u></a>, ou mesmo &#127963;, <a href="#visitar"><u>caso pretenda visitar</u></a>;</p>
-          </main>
-        </div>
+{% block main %}
+        <p>&ensp;Na cidade de Menton está localizado o Restaurante <b>Mirazur</b>. Esta &#127750; situa-se em França quase na fronteira com Itália. </p>
+        <p>&ensp;Menton, tem cerca de 28 858 &#128109;&#128108;&#128107; e uma área total de 14,05 quilometros quadrados. Uma das principais razões por cidade ser conhecida é pelo seu bom clima &#9728;, que faz com que seja um ótimo  &#128205; para passar férias.</p>
+        <p>&enspEsta cidade apresenta uma variedade de 🏩, <a href="#ficar"><u>caso pretenda ficar alojado</u></a>, bem como vistas incriveis da 🌲, <a href="#explorar"><u>caso pretenda explorar</u></a>, ou mesmo &#127963;, <a href="#visitar"><u>caso pretenda visitar</u></a>;</p>
+{%  endblock main %}
 
         <!--Article-->
-        <div class="article">
-          <article>
-            <div id="ficar"></div>
-        <!--Correspondente ao alojamento-->
-        <h2>Se pertencer Ficar</h2>
+{% block article %}
+    <div id="ficar"></div>
+    <!--Correspondente ao alojamento-->
+    <h2>Se pertencer Ficar</h2>
 
-            <div class="row1">
+        <div class="row1">
 
-        <div class="column1">
-                <div class="gallery-item">
-                  <div class="image">
-                      <img src="images/mirazur/mirazur_hotel1.jpg" class="img">
-                    <div class="middle">
-                      <div class="text">
-                          <b>Villa Philae</b>
-                              <p><i>Um refúgio de paz com uma vista deslubrante!</i></p>
-                              <p>Luxuosa villa de 5 estrelas com piscina aquecida,na mais bonita zona residencial de Menton em Garavan (nos Alpes Marítimos 06), numa zona sossegada a 5 min do centro da cidade e das praias. Mônaco e Itália próximos.</p>
-                              <p>Consulte o site <a href="https://www.villaphilae.com/">aqui</a></p>
-                       </div>
-                    </div>
-                  </div>
-              </div>
-        </div>
-
-        <div class="column1" >
+    <div class="column1">
             <div class="gallery-item">
-                <div class="image">
-                  <img src="images/mirazur/mirazur_hotel2.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>Villa Eva Hotel</b>
-                          <p>O Hotel Villa Eva é um recém-construído hotel de 3 estrelas perto do Golfo de Latte di Ventimiglia, rodeado por palmeiras e pinheiros mediterrâneos, oferece-lhe todos os confortos e serviços para uma estadia inesquecível.</p>
-                          <p>O hotel Villa Eva goza de uma posição esplêndida para chegar à vizinha Cote d'Azur, Menton, Montecarlo, Nice.</p>
-                          <p>Consulte o site <a href="https://villaevahotel.com/index.php">aqui</a></p>
-                     </div>
+              <div class="image">
+                  <img src='{% static "ProjetoPW/images/mirazur/mirazur_hotel1.jpg" %}'  class="img" alt="">
+                <div class="middle">
+                  <div class="text">
+                      <b>Villa Philae</b>
+                          <p><i>Um refúgio de paz com uma vista deslubrante!</i></p>
+                          <p>Luxuosa villa de 5 estrelas com piscina aquecida,na mais bonita zona residencial de Menton em Garavan (nos Alpes Marítimos 06), numa zona sossegada a 5 min do centro da cidade e das praias. Mônaco e Itália próximos.</p>
+                          <p>Consulte o site <a href="https://www.villaphilae.com/">aqui</a></p>
+                   </div>
                 </div>
               </div>
-            </div>
-        </div>
-
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                  <img src="images/mirazur/mirazur_hotel3.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>El Paradiso</b>
-                          <p>O Hotel El Paradiso, está situado na entrada leste de Menton, a 700 metros da fronteira italiana e na parte mais bonita da Riviera de Menton. Fica a apenas 2 km da estação de trem de Menton e só precisará de cerca de 40 minutos de carro do aeroporto de Nice.</p>
-                          <p>É um hotel com um verdadeiro toque francês localizado dentro de um belo edifício do início do século 20 com características arquitetônicas originais ainda intactas. </p>
-                          <p>Consulte o site <a href="http://elparadiso-menton.com/">aqui</a></p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div id="explorar"></div>
-        <!--Correspondente das atividades da Natureza-->
-        <h2>Se pretender explorar a Natureza</h2>
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                    <img src="images/mirazur/mirazur_atividade1.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>Jardim Maria Serena</b>
-                            <p>No sopé das falésias que acompanham a fronteira italiana, a Villa Maria Serena apresenta os seus jardins num local denominado "Pequena África".</p>
-                            <p>Uma coleção de palmeiras e cicadáceas adorna estes jardins onde strelitzia alba, dracena, bohinia se destacam contra o mar e o convidam a viajar.</p>
-                            <!--<p>Criada em 1886 para a família Foucher de Careil por Charles Garnier, a villa Maria Serena foi adquirida em 1922 por um banqueiro britânico, Henry Konig, que a legou à cidade em 1947. Esta casa é agora utilizada como cenário para as recepções de convidados ilustres como Elisabeth da Baviera, o presidente René Coty e também grandes personalidades das artes e das letras.</p>-->
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="column1" >
-            <div class="gallery-item">
-                <div class="image">
-                    <img src="images/mirazur/mirazur_atividade2.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>Hawaiistrand</b>
-                          <p>Uma área com vista para a antiga Menton.</p>
-                          <p>Praia com seixos e rochas. Onde a claridade da água permite observar uma variedade imensa de espécies de peixes.</p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                  <img src="images/mirazur/mirazur_atividade3.png" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>Les Colombières</b>
-                          <p>Projetados por 7 anos, os jardins são a peça central do Domaine des Colombières. Originalmente 7 hectares (hoje 3,5 hectares) e separados em 'fábricas' interligadas por caminhos, sua estrutura, desenvolvimento e desenvolvimento são inteiramente inspirados na cultura mediterrânea, desde a estrutura das fábricas às variedades plantadas, pontilhadas por potes tradicionais e esculturas inspiradas em temas antigos.</p>
-                          <p>Marque a sua visita <a href="https://www.lescolombieres.com/">aqui</a></p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div id="visitar"></div>
-        <!--Correspondentes das Atividades onde visitar-->
-        <h2>Se pretender Visitar </h2>
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                    <img src="images/mirazur/mirazur_monumento1.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                        <b>Chapelle Saint-Jacques</b>
-                            <p>É um antigo oratório para viajantes construído em 1688. Posteriormente, tornou-se a capela funerária da família Bertrand, depois dos Pretti de Sainte-Marie.</p>
-                            <p>A capela foi transformada em sala de exposições temporárias.</p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                  <img src="images/mirazur/mirazur_monumeto2.png" class="img">
-                  <div class="middle">
-                    <div class="text">
-                      <b>Basilica of Saint Michael Archangel</b>
-                          <p>Com a sua fachada, a sua torre sineira, o seu parvis formado por seixos que representam o brasão dos Grimaldi, as suas rampas majestosas, é uma jóia da arte barroca.</p>
-                          <p>Mais de 100.000 turistas a visitam-na cada ano.</p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="column1">
-            <div class="gallery-item">
-                <div class="image">
-                  <img src="images/mirazur/mirazur_monumento3.jpg" class="img">
-                  <div class="middle">
-                    <div class="text">
-                      <b>La Chapelle des Penitents Blancs</b>
-                          <p>A Capela da Imaculada Conceição , também conhecida como Penitentes Brancos, foi construída entre 1680 e 1687 em um terreno doado pela família Monléon e o Príncipe Luís I.</p>
-                          <p>Esta capela foi classificada como monumento histórico desde o3 de março de 1947.</p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-            </div>
-          </article>
-        </div>
-
+          </div>
     </div>
+
+    <div class="column1" >
+        <div class="gallery-item">
+            <div class="image">
+              <img src='{% static "ProjetoPW/images/mirazur/mirazur_hotel2.jpg" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>Villa Eva Hotel</b>
+                      <p>O Hotel Villa Eva é um recém-construído hotel de 3 estrelas perto do Golfo de Latte di Ventimiglia, rodeado por palmeiras e pinheiros mediterrâneos, oferece-lhe todos os confortos e serviços para uma estadia inesquecível.</p>
+                      <p>O hotel Villa Eva goza de uma posição esplêndida para chegar à vizinha Cote d'Azur, Menton, Montecarlo, Nice.</p>
+                      <p>Consulte o site <a href="https://villaevahotel.com/index.php">aqui</a></p>
+                 </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+              <img src='{% static "ProjetoPW/images/mirazur/mirazur_hotel3.jpg" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>El Paradiso</b>
+                      <p>O Hotel El Paradiso, está situado na entrada leste de Menton, a 700 metros da fronteira italiana e na parte mais bonita da Riviera de Menton. Fica a apenas 2 km da estação de trem de Menton e só precisará de cerca de 40 minutos de carro do aeroporto de Nice.</p>
+                      <p>É um hotel com um verdadeiro toque francês localizado dentro de um belo edifício do início do século 20 com características arquitetônicas originais ainda intactas. </p>
+                      <p>Consulte o site <a href="http://elparadiso-menton.com/">aqui</a></p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div id="explorar"></div>
+    <!--Correspondente das atividades da Natureza-->
+    <h2>Se pretender explorar a Natureza</h2>
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+                <img src='{% static "ProjetoPW/images/mirazur/mirazur_atividade1.jpg" %}'class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>Jardim Maria Serena</b>
+                        <p>No sopé das falésias que acompanham a fronteira italiana, a Villa Maria Serena apresenta os seus jardins num local denominado "Pequena África".</p>
+                        <p>Uma coleção de palmeiras e cicadáceas adorna estes jardins onde strelitzia alba, dracena, bohinia se destacam contra o mar e o convidam a viajar.</p>
+                        <!--<p>Criada em 1886 para a família Foucher de Careil por Charles Garnier, a villa Maria Serena foi adquirida em 1922 por um banqueiro britânico, Henry Konig, que a legou à cidade em 1947. Esta casa é agora utilizada como cenário para as recepções de convidados ilustres como Elisabeth da Baviera, o presidente René Coty e também grandes personalidades das artes e das letras.</p>-->
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="column1" >
+        <div class="gallery-item">
+            <div class="image">
+                <img src='{% static "ProjetoPW/images/mirazur/mirazur_atividade2.jpg" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>Hawaiistrand</b>
+                      <p>Uma área com vista para a antiga Menton.</p>
+                      <p>Praia com seixos e rochas. Onde a claridade da água permite observar uma variedade imensa de espécies de peixes.</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+              <img src='{% static "ProjetoPW/images/mirazur/mirazur_atividade3.png" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>Les Colombières</b>
+                      <p>Projetados por 7 anos, os jardins são a peça central do Domaine des Colombières. Originalmente 7 hectares (hoje 3,5 hectares) e separados em 'fábricas' interligadas por caminhos, sua estrutura, desenvolvimento e desenvolvimento são inteiramente inspirados na cultura mediterrânea, desde a estrutura das fábricas às variedades plantadas, pontilhadas por potes tradicionais e esculturas inspiradas em temas antigos.</p>
+                      <p>Marque a sua visita <a href="https://www.lescolombieres.com/">aqui</a></p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div id="visitar"></div>
+    <!--Correspondentes das Atividades onde visitar-->
+    <h2>Se pretender Visitar </h2>
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+                <img src='{% static "ProjetoPW/images/mirazur/mirazur_monumento1.jpg" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                    <b>Chapelle Saint-Jacques</b>
+                        <p>É um antigo oratório para viajantes construído em 1688. Posteriormente, tornou-se a capela funerária da família Bertrand, depois dos Pretti de Sainte-Marie.</p>
+                        <p>A capela foi transformada em sala de exposições temporárias.</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+              <img src='{% static "ProjetoPW/images/mirazur/mirazur_monumeto2.png" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                  <b>Basilica of Saint Michael Archangel</b>
+                      <p>Com a sua fachada, a sua torre sineira, o seu parvis formado por seixos que representam o brasão dos Grimaldi, as suas rampas majestosas, é uma jóia da arte barroca.</p>
+                      <p>Mais de 100.000 turistas a visitam-na cada ano.</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="column1">
+        <div class="gallery-item">
+            <div class="image">
+              <img src='{% static "ProjetoPW/images/mirazur/mirazur_monumento3.jpg" %}' class="img" alt="">
+              <div class="middle">
+                <div class="text">
+                  <b>La Chapelle des Penitents Blancs</b>
+                      <p>A Capela da Imaculada Conceição , também conhecida como Penitentes Brancos, foi construída entre 1680 e 1687 em um terreno doado pela família Monléon e o Príncipe Luís I.</p>
+                      <p>Esta capela foi classificada como monumento histórico desde o3 de março de 1947.</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+        </div>
+{% endblock article %}
 
     <div class="parallax"></div>
 
     <!--Footer-->
-    <div class="footer">
-      <footer>
-        <p> Universade Lusófona de Humanidades e Tecnologias </p>
-        <div class="redes_sociais">
-          <a href="https://www.instagram.com/restaurantmirazur/?hl=pt" target="_blank"><span class="instagram"></span>Instagram</a>
-          <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
-        </div>
-      </footer>
+{% block footer %}
+    <div class="redes_sociais">
+      <a href="https://www.instagram.com/restaurantmirazur/?hl=pt" target="_blank"><span class="instagram"></span>Instagram</a>
+      <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
     </div>
-</body>
-</html>
+{% endblock footer %}

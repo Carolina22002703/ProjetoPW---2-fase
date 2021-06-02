@@ -5,43 +5,69 @@ from django.urls import reverse
 from .models import Usuario
 from .forms import UsuarioFormulario
 
+
 # Create your views here.
 
-#Index
+# Mapa
+def mapa_page_view(request):
+    return render(request, 'ProjetoPW/mapa.html')
+
+
+# Informacao
+def informcao_page_view(request):
+    return render(request, 'ProjetoPW/informacao.html')
+
+
+# Formulário
+def formulario_page_view(request):
+    return render(request, 'ProjetoPW/formulario.html')
+
+
+# Index
 def index_page_view(request):
     return render(request, 'ProjetoPW/index.html')
 
-#Mirazur
+
+# Mirazur
 def mirazurIntroducao_page_view(request):
     return render(request, 'ProjetoPW/mirazurIntroducao.html')
+
 
 def mirazurCozinha_page_view(requeste):
     return render(requeste, 'ProjetoPW/mirazurCozinha.html')
 
+
 def mirazurPinteresse_page_view(requeste):
     return render(requeste, 'ProjetoPW/mirazurPinteresse.html')
 
-#Celler
+
+# Celler
 def cellerIntroducao_page_view(request):
     return render(request, 'ProjetoPW/cellerIntroducao.html')
+
 
 def cellerCozinha_page_view(requeste):
     return render(requeste, 'ProjetoPW/cellerCozinha.html')
 
+
 def cellerPinteresse_page_view(requeste):
     return render(requeste, 'ProjetoPW/cellerPinteresse.html')
 
-#Noma
+
+# Noma
 def nomaIntroducao_page_view(request):
     return render(request, 'ProjetoPW/nomaIntroducao.html')
+
 
 def nomaCozinha_page_view(requeste):
     return render(requeste, 'ProjetoPW/nomaCozinha.html')
 
+
 def nomaPinteresse_page_view(requeste):
     return render(requeste, 'ProjetoPW/nomaPinteresse.html')
 
-#Contacto
+
+# Contacto
 def contacto_page_view(request):
     context = {'ProjetoPW': Usuario.objects.all()}
     return render(request, 'ProjetoPW/contacto.html', context)
