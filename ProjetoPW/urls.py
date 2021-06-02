@@ -18,6 +18,9 @@ urlpatterns = [
     # Index
     path('index', views.index_page_view, name='index'),  # ERRO
 
+    #Quizz
+    path('quizz', views.quizz_page_view, name='quizz'),
+
     # Celler
     path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),
     path('', views.cellerCozinha_page_view, name='cellerCozinha'),
@@ -34,7 +37,7 @@ urlpatterns = [
     path('nomaPinteresse', views.nomaPinteresse_page_view, name='nomaPinteresse'),
 
     # Contacto
-    path('home', views.contacto_page_view, name='contacto'),
+    path('contacto', views.contacto_page_view, name='contacto'),
     path('listar/', views.novo_contacto_view, name='listar'),
     path('edita/<int:usuario_id>', views.edita_contacto_view, name="edita"),
     path('apaga/<int:usuario_id>', views.apaga_contacto_view, name="apaga"),

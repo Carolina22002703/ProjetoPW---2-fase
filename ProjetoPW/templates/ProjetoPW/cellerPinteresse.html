@@ -58,10 +58,10 @@
 {% endblock body %}
 
 {% block nav %}
-            <a href="cellerIntroducao.html"> Apresentação </a>
-            <b><a href="cellerPinteresse.html"> Pontos de Interesse </a></b>
-            <a href="cellerCozinha.html"> Cozinha </a>
-            <a href="index.html"> Home </a>
+            <a  href="{% url 'ProjetoPW:cellerIntroducao' %}" > Apresentação </a>
+            <b><a href="{% url 'ProjetoPW:cellerPinteresse' %}"> Pontos de Interesse </a></b>
+            <a href="{% url 'ProjetoPW:cellerCozinha' %}"> Cozinha </a>
+            <a href="{% url 'ProjetoPW:index' %}"> Home </a>
 {% endblock nav %}
 
 {% block header %}

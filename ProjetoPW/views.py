@@ -13,6 +13,11 @@ def mapa_page_view(request):
     return render(request, 'ProjetoPW/mapa.html')
 
 
+# Quizz
+def quizz_page_view(request):
+    return render(request, 'ProjetoPW/quizz.html')
+
+
 # Informacao
 def informcao_page_view(request):
     return render(request, 'ProjetoPW/informacao.html')

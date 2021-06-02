@@ -75,10 +75,10 @@
 
     <!--Nav-->
 {% block nav %}
-    <a href="nomaIntroducao.html"> Apresentação </a>
-    <a href="nomaPinteresse.html"> Pontos de Interesse </a>
-    <b><a href="nomaCozinha.html"> Cozinha </a></b>
-    <a href="index.html"> Home </a>
+    <a  href="{% url 'ProjetoPW:nomaIntroducao' %}" > Apresentação </a>
+    <a href="{% url 'ProjetoPW:nomaPinteresse' %}"> Pontos de Interesse </a>
+    <b><a href="{% url 'ProjetoPW:nomaCozinha' %}"> Cozinha </a></b>
+    <a href="{% url 'ProjetoPW:index' %}"> Home </a>
 {% endblock nav%}
 
     <!--Header-->

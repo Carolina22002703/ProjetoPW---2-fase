@@ -67,10 +67,10 @@
 
     <!--Nav-->
 {% block nav %}
-    <a href="mirazurIntroducao.html"> Apresentação </a>
-    <b><a href="mirazurPinteresse.html"> Pontos de Interesse </a></b>
-    <a href="mirazurCozinha.html"> Cozinha </a>
-    <a href="index.html"> Home </a>
+    <b><a  href="{% url 'ProjetoPW:mirazurIntroducao' %}" > Apresentação </a></b>
+    <a href="{% url 'ProjetoPW:mirazurPinteresse' %}"> Pontos de Interesse </a>
+    <a href="{% url 'ProjetoPW:mirazurCozinha' %}"> Cozinha </a>
+    <a href="{% url 'ProjetoPW:index' %}"> Home </a>
 {% endblock nav %}
 
     <!--Header-->

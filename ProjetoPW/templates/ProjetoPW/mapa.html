@@ -58,6 +58,7 @@
     <a href="informacao.html" target="_blank">&#10067; Informações </a>
     <a href="formulario.html" target="_blank">&#128203; Formulário </a>
     <b><a href="mapa.html" target="_blank">🗺️ Mapa do Website</a></b>
+    <a href="{% url 'ProjetoPW:contacto' %}"> Contacto </a>
     <a href="index.html" target="_blank">&#128281; Home </a>
 {% endblock nav %}
 
@@ -73,35 +74,37 @@
                 <ul>
                     <li><a href="#"> Mirazur</a>
                         <ul>
-                            <li><a href="mirazurIntroducao.html"> Introdução</a></li>
-                            <li><a href="mirazurPinteresse.html"> Pontos de Interesse</a></li>
-                            <li><a href="mirazurCozinha.html">Cozinha</a></li>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a  href="{% url 'ProjetoPW:mirazurIntroducao' %}" > Apresentação </a></li>
+                            <li><a href="{% url 'ProjetoPW:mirazurPinteresse' %}"> Pontos de Interesse </a></li>
+                            <li><a href="{% url 'ProjetoPW:mirazurCozinha' %}"> Cozinha </a></li>
+                            <li><a href=""{% url 'ProjetoPW:index' %}></a> Home </li>
                         </ul>
                     </li>
                     <li><a href="#" style="width: 300px;"> El Celler De Can Roca</a>
                         <ul>
-                            <li><a href="cellerIntroducao.html"> Introdução</a></li>
-                            <li><a href="cellerPinteresse.html">Pontos de Interesse</a></li>
-                            <li><a href="cellerCozinha.html">Cozinha</a></li>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a  href="{% url 'ProjetoPW:cellerIntroducao' %}" > Apresentação </a></li>
+                            <li><a href="{% url 'ProjetoPW:cellerPinteresse' %}"> Pontos de Interesse </a></li>
+                            <li><a href="{% url 'ProjetoPW:cellerCozinha' %}"> Cozinha </a></li>
+                            <li><a href=""{% url 'ProjetoPW:index' %}></a> Home </li>
                         </ul>
                     </li>
                     <li><a href="#"> Noma</a>
                         <ul>
-                            <li><a href="nomaIntroducao.html">Introdução</a></li>
-                            <li><a href="nomaPinteresse.html">Pontos de Interesse</a></li>
-                            <li><a href="nomaCozinha.html">Cozinha</a></li>
-                            <li><a href="index.html">Home</a></li>
+                           <li><a  href="{% url 'ProjetoPW:nomaIntroducao' %}" > Apresentação </a></li>
+                            <li><a href="{% url 'ProjetoPW:nomaPinteresse' %}"> Pontos de Interesse </a></li>
+                            <li><a href="{% url 'ProjetoPW:nomaCozinha' %}"> Cozinha </a></li>
+                            <li><a href=""{% url 'ProjetoPW:index' %}></a> Home </li>
                         </ul>
                     </li>
                     <li><a href="#" style="width: 300px;"> Detalhes do Projeto</a>
                         <ul>
-                            <li><a href="informacao.html">Informações</a></li>
-                            <li><a href="mapa.html"> Mapa do Website </a></li>
+                            <li><a href="{% url 'ProjetoPW:informacao' %}">Informações</a></li>
+                            <li><a href="{% url 'ProjetoPW:mapa' %}"> Mapa do Website </a></li>
                         </ul>
                     </li>
-                    <li><a href="formulario.html"> Formulário</a></li>
+                    <li><a href="{% url 'ProjetoPW:formulario' %}">&#128203; Formulário</a></li>
+                    <li><a href="{% url 'ProjetoPW:contacto' %}"> Contacto </a></li>
+                    <li><a href="{% url 'ProjetoPW:quizz' %}"> Quizz </a></li>
 
                 </ul>
         </main>
