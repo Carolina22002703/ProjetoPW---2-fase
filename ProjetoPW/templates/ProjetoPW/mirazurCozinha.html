@@ -1,0 +1,195 @@
+{% extends 'ProjetoPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoPW/images/mirazur/capa.jpg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed{
+            height: 30px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        h1{
+          text-align: center;
+          font-size: 4vw;
+          font-family: 'New Tegomin', serif;
+        }
+        h2{
+            text-align: center;
+            color:rgb(243, 218, 187);
+        }
+        h3{
+            color:rgb(26, 50, 82);
+            text-align: center;
+        }
+        h5{
+            text-align: center;
+            color:rgb(50, 97, 158);
+            font-size: 0.8vw;
+        }
+        .linha{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+        .header{
+            color :rgb(31, 95, 138);
+        }
+        .nav{
+            background-color: rgb(31, 95, 138);
+        }
+        .nav a{
+            background-color: rgb(31, 95, 138);
+        }
+        .footer{
+            background-color: rgb(31, 95, 138);
+        }
+        #circular{
+            border-radius: 120px;
+        }
+        #half_circulo{
+        border-radius: 50px;
+        }
+    </style>
+{% endblock head %}
+
+{% block nav %}
+    <a href="mirazurIntroducao.html"> Apresentação </a>
+    <a href="mirazurPinteresse.html"> Pontos de Interesse </a>
+    <b><a href="mirazurCozinha.html"> Cozinha </a></b>
+    <a href="index.html"> Home </a>
+{% endblock nav %}
+
+{% block header %}
+    <h1>Mirazur</h1>
+{% endblock header %}
+
+{% block itemAuxiliar %}
+    <div class="row1">
+          <div class="columnPagina" style="background-color: rgba(43, 129, 226, 0.87);">
+                <br>
+                <i class="fa fa-video-camera" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+                <br>
+                <h3>Vídeos do Chefe</h3>
+                <a href="#section">Clique aqui</a>
+          </div>
+          <div class="columnPagina" style="background-color: rgb(31, 95, 138);">
+                <br>
+                <i class="fa fa-cutlery" style="font-size:4vw;color: rgb(238, 238, 238);"></i>
+                <br>
+                <h3>Pratos do Chefe</h3>
+                <a href="#article">Clique aqui</a>
+          </div>
+
+          <div class="columnPagina" style="background-color:rgba(32, 141, 204, 0.884);">
+                <br>
+                <i class="fa fa-user-circle-o" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+                <br>
+                <h3>Acerca do Chefe</h3>
+                <a href="#aside">Clique aqui</a>
+          </div>
+        </div>
+{% endblock itemAuxiliar %}
+
+{% block section %}
+    <h5> Melhor Restaurante do Mundo, 2019</h5>
+                <div class="container_video">
+                    <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/HhuwAx4BTyQ" ></iframe>
+                </div>
+                <details>
+                    <summary>Saber mais</summary>
+                    <p>Seis meses após o Mirazur ser anunciado como o Melhor Restaurante do Mundo 2019. Mauro Colagreco compartilhou suas ideias, durante um jantar em Buenos Aires.</p>
+                </details>
+                <br><br>
+
+                <h5> Venha cozinhar com o Chefe</h5>
+                <div class="container_video">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/UXzGKZbj7dA" ></iframe>
+                </div>
+                <details>
+                        <summary>Saber mais</summary>
+                        <p>Chef do Mirazur em Menton, o melhor restaurante do mundo segundo o júri 50 Best, e premiado com 3 estrelas Michelin. Mauro Colagreco faz a sua receita simples de salada de primavera, exclusivamente para a Vogue Paris.</p>
+                </details>
+            </div>
+{% endblock section %}
+
+{% block main %}
+     <br>
+                <p><h2> Chefe Mauro Colagreco</h2></p>
+                <p> &ensp; O Chefe Mauro Colagreco continua a transformar a sua gastronomia inspirando-se na observação da Natureza e no trabalho desenvolvido dentro dos seus jardins.</p>
+                <p> &ensp; Movido pela Natureza, influências cósmicas e interações que afetam toda a sua vida, o Chefe procura oferecer um menu que proporciona uma viagem gastronómica para descobrir a essência e a força vital de cada dia de acordo com as variações do calendário biodinâmico.</p>
+                <p><i>"Quando um legume cresce naturalmente ao lado de outro, estes são feitos para estarem juntos no prato. Inclusive, criei uma horta para cultivar os legumes que uso no restaurante."</i></p>
+                <p><b style="color: rgb(12, 12, 78);"> A cozinha de Mauro tem o objetivo de se expressar livremente!</b></p>
+
+               <div class="linha">
+                   <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur.prato4.jfif" %}' height="100px" class="img" id="circular" alt=""></figure>
+                   <a href="https://www.seedvilleusa.com/listing/710938609/edible-flower-mix-seeds-16-types"><figcaption class="none">Exigência num Prato</figcaption></a>
+                   <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur.chefe2.jpg" %}' height="100px" class="img" id="circular" alt=""></figure>
+                   <a href="https://www.identitagolose.it/ermes/newsletter/?id=13"><figcaption class="none">Preparação do Chefe</figcaption></a>
+               </div>
+{% endblock main %}
+
+{% block aside %}
+    <figure><img src='{% static "ProjetoPW/images/mirazur/mirazur.chefe1.jpg" %}' class="img" alt=""></figure>
+    <a href="https://www.identitagolose.it/ermes/newsletter/?id=13"><figcaption class="none">Fotografia do Chefe</figcaption></a>
+    <a href="https://www.instagram.com/maurocolagreco/"> 👨🏽‍🍳 Descubra mais </a>
+
+    <p id="descricao" style="background-color: rgb(70, 154, 223);"> <b>&#128198; Nascimento:</b> 5 de Outubro de 1976, La Plata, Argentina</p>
+    <p id="descricao" style="background-color: rgb(70, 154, 223);"> <b>&#8987; Idade:</b> 44 anos</p>
+    <p id="descricao" style="background-color: rgb(70, 154, 223);"> <b>&#127891; Formação:</b> Hotel School, Gato Dumas - College of Gastronomy </p>
+    <p id="descricao" style="background-color: rgb(70, 154, 223);"> <b>&#128215; Livros:</b> <a href="https://kitchenartsandletters.com/product/mirazur-2/">Mirazur (English)</a>, <a href="https://www.amazon.com.br/Cuisiner-minceur-pas-%C3%A0/dp/250107534X">Cuisiner minceur pas à pas</a> </p>
+{% endblock aside %}
+
+{% block article %}
+    <div id="article">
+                <div class="caixa_flex">
+                    <!--Primeira Caixa-->
+                    <div class="caixa">
+                        <div class="caixa_header">
+                        <img src='{% static "ProjetoPW/images/mirazur/mirazur.prato1.jfif" %}' class="img" alt="">
+                        </div>
+                        <div class="caixa_middle">
+                        <h2 class="caixa_middle_name"> Jardim </h2>
+                        </div>
+                        <p class="caixa_texto"> Ingredientes da nossa horta e do mercado </p>
+                    </div>
+                    <!--Segunda Caixa-->
+                    <div class="caixa">
+                        <div class="caixa_header">
+                        <img src='{% static "ProjetoPW/images/mirazur/mirazur.prato2.jfif" %}' class="img" alt="">
+                        </div>
+                        <div class="caixa_middle">
+                        <h2 class="caixa_middle_name"> Montanha </h2>
+                        </div>
+                        <p class="caixa_texto"> Plantas, flores, frutas e cogumelos selvagens colhidos da Floresta.</p>
+                    </div>
+                    <!--Terceira Caixa-->
+                    <div class="caixa">
+                        <div class="caixa_header">
+                        <img src= '{% static "ProjetoPW/images/mirazur/mirazur.prato3.jpg" %}' class="img" alt="">
+                        </div>
+                        <div class="caixa_middle">
+                        <h2 class="caixa_middle_name"> Mar </h2>
+                        </div>
+                        <p class="caixa_texto"> Peixes, mariscos e crustáceos dos pescadores mediterrâneos. </p>
+                    </div>
+                </div>
+            </div>
+{% endblock article %}
+
+{% block footer %}
+     <div class="redes_sociais">
+                <a href="https://www.instagram.com/restaurantmirazur/?hl=pt" target="_blank"><span class="instagram"></span>Instagram</a>
+                <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
+     </div>
+{% endblock footer %}

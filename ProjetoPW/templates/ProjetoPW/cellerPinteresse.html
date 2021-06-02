@@ -1,0 +1,325 @@
+{% extends 'ProjetoPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoPW/images/Celler/celler_capa.jpg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed{
+            height: 30px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        h1{
+          text-align: center;
+          font-size: 4vw;
+          font-family: 'New Tegomin', serif;
+        }
+        h2{
+            text-align: center;
+            color:rgb(228, 172, 99);
+        }
+        h3{
+            color:rgb(85, 82, 73);
+            text-align: center;
+        }
+        .header{
+            color :rgb(199, 142, 57);
+        }
+        .nav{
+            background-color: rgb(199, 142, 57);
+        }
+        .nav a{
+            background-color: rgb(199, 142, 57);
+        }
+        .footer{
+            background-color: rgb(199,142,57);
+        }
+
+        .linha{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+    </style>
+{% endblock head %}
+
+{% block nav %}
+            <a href="cellerIntroducao.html"> Apresentação </a>
+            <b><a href="cellerPinteresse.html"> Pontos de Interesse </a></b>
+            <a href="cellerCozinha.html"> Cozinha </a>
+            <a href="index.html"> Home </a>
+{% endblock nav %}
+
+{% block header %}
+    <h1>El Celler De Can Roca</h1>
+{% endblock header %}
+
+{% block itemAuxiliar %}
+    <div class="row1">
+          <div class="columnPInteresse" style="background-color: rgb(199, 142, 57);">
+          <br>
+          <i class="fa fa-map-pin" style="font-size:2vw;color: rgb(238, 238, 238);"></i><b style="color:white">Girona</b>
+          <br>
+          </div>
+    </div>
+{% endblock itemAuxiliar %}
+
+{% block main %}
+    <p>&ensp;Na cidade de Girona situa-se o restaurante <b>El Celler de Can Roca</b>. Esta &#127750; é uma província localizada em Espanha, no externo nordeste da comunidade autónoma da <a href="https://pt.wikipedia.org/wiki/Catalunha">Catalunha.</a> </p>
+    <p>&ensp;Girona tem cerca de 663 793 &#128109;&#128108;&#128107;, é conhecida principalmente pelas suas &#127749; da Costa Brava e pelos seus &#128333; e &#127963; de enorme riqueza que se encontram nas cidades medievais. Os seus hóteis que acolhem as 👨‍👩‍👦‍👦 todos os anos são um ponto chave para uma boa experiência, bem como os parques naturais no meio da cidade que equilibram a 🌲 com a &#127750;. </p>
+{% endblock main %}
+
+{% block article %}
+    <h2>Conhecer a Cidade de girona</h2>
+
+    <div class="columnImg">
+                      <div class="gallery-item">
+                        <div class="image">
+                          <img src='{% static "ProjetoPW/images/Celler/girona1.jpg" %}' class="img" alt="">
+                          <a href="https://media-cdn.tripadvisor.com/media/photo-s/10/6c/82/43/caption.jpg"><figcaption class=none> Art Museum</figcaption></a>
+                          <div class="middle">
+                            <div class="text">
+                                <b>Art Museum</b><br>
+                                O Museu de Arte foi fundado em 1976 e está localizado no antigo palácio episcopal de Girona, junto à catedral.
+                                No museu é possível ver a arte da cidade em ordem cronológica através de períodos e estilos sucessivos: Românico, Gótico, Renascentista, Barroco, Realismo, Modernismo e Noucentismo. Existem também salas monográficas dedicadas à cerâmica, vidro e arte da liturgia católica, além de salas para exposições temporárias.
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona2.jpeg" %}' class="img" alt="">
+                           <a href="https://visitmuseum.gencat.cat/media/cache/1140x684/uploads/museums/photos/54d89460625a5_museu-tresor-de-la-catedral-de-girona.jpeg"><figcaption class=none> Catedral de Girona</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Catedral de Girona</b><br>
+                                A Catedral de Girona consagrada a Santa Maria, encontra-se no ponto mais alto da cidade e possui a maior nave gótica do mundo, com um tamanho total de 22,98 metros.
+                                O seu interior é possível ver a grandiosa nave gótica, única, coberta por um cofre com arcos diagonais apoiados por grupos de pequenas colunas.
+                                A atual construção está documentada desde 1015, quando se procedeu a reforma da igreja de Santa Maria.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona3.jpg" %}' class="img" alt="">
+                           <a href="https://www.google.com/search?q=Muralla+de+Girona&sxsrf=ALeKk032ie0LWLCSrInavPcTD5UbvCb8rQ:1617357670709&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTsL_rpt_vAhUdCWMBHWpXCP8Q_AUoAXoECAEQAw&biw=1422&bih=615#imgrc=07h0D-BYmXvflM"><figcaption class="none">Passeig de la Muralla</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Passeig de la Muralla</b><br>
+                                As muralhas de Girona correspondem a um conjunto de elementos defensivos, como muralhas, castelos, torres, portais e baluartes, que circundam o centro histórico da cidade.
+                                A data da fundação do muro foi no século IX, quando os romanos fundaram a cidade de Girona, tem vindo a sofrer expansões e destroços ao longo dos séculos. Atualmente, podem ser observados e percorridos em todas as suas secções.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona4.jpg" %}' class="img" alt="">
+                           <a href="https://media.timeout.com/images/103724824/1024/576/image.jpg"><figcaption class="none">Museu d'Història dels Jueus</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Museu d'Història dels Jueus</b><br>
+                                O Museu de História Judaica, localizado no centro de Bonastruc ça Porta, procura explicar a história das comunidades judaicas, como o seu quotidiano e a cultura.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona5.jpg" %}' class="img" alt="">
+                           <a href="http://4.bp.blogspot.com/-eNPbXofn6VE/USUjhc_jwTI/AAAAAAAAFBE/3zLvMhpdRpA/s400/7620264530_cb1897aa9f_z.jpg"><figcaption class="none">El Parc Del Migdia</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>El Parc Del Migdia</b><br>
+                                Atualmente é o maior parque do interior da cidade, além do Parc de la Devesa. É considerado uma ilha verde bem definida que permite diversas atividades de lazer.
+                                O <i>Parc del Migdia</i> possui um lago de 6.000 m2 e um jardim de 38.110 m2. É uma pérgula repleta de vinhas, o passeio de tília e uma zona arborizada de diversas espécies, muito fértil e com algumas palmeiras, o sítio perfeito para descansar à sombra e aproveitar a natureza.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona6.jpg" %}' class="img" alt="">
+                           <a href="https://media.timeout.com/images/103169483/image.jpg"><figcaption class="none"> Parc de les Ribes del Ter</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                 <b>Parc de les Ribes del Ter</b><br>
+                                O <i>Parc de les Ribes del Ter</i> corre ao longo do curso do rio Ter, desde Fontajau até um ponto em frente aos prados da Pont Major. O apelo desta área, além de sua beleza inerente, é sua rica e variada de vida selvagem.
+                                É um lugar onde existe uma excelente oportunidade para contemplar as aves que ali nidificam, sendo também possível avistar insetos, anfíbios e peixes.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona7.jpg" %}' class="img" alt="">
+                           <a href="https://dicasbarcelona.com.br/wp-content/uploads/2017/09/Praia-da-Costa-Brava-1.jpg"><figcaption class="none"> Costa Brava </figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                 <b>Costa Brava</b><br>
+                                 A Costa Brava é a costa espanhola da província de Girona, situa-se no nordeste da Península Ibérica incluindo várias cidades e vilas costeiras.<br>
+                                 Trata-se de uma linha costeira, inicia-se na desembocadura de La Tordera (Blanes) e termina na região Norte da Catalunha, com cerca de 300 km banhada pelas águas cristalinas do Mediterrâneo por um lado e pelo outro pelas montanhas dos Pirenéus. É uma região diversificada de beleza extraordinária com património cultural e artístico de grande valor.
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona8.jpg" %}' class="img" alt="">
+                           <a href="https://www.irouicome.com/blog/wp-content/uploads/2020/03/lloret-del-mar-castillo-y-playa-sa-caleta.jpg"><figcaption class="none"> Sa Caleta, Lloret de Mar</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                 <b>Sa Caleta, Lloret de Mar</b><br>
+                                Seguindo a Costa Brava, é possível descobrir uma maravilhosa enseada rochosa com um ambiente agradável, Sa Caleta. Esta praia está localizada a oeste de Sant Pol Beach, perto do castelo Platja de Lloret de Mar.
+                                É cercada por falésias de argila vermelha e a água é rasa e clara.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona9.jpg" %}' class="img" alt="">
+                           <a href="https://photo980x880.mnstatic.com/3b3924820eaeb377cb8063f1ab7d9451/cala-de-illa-roja-7215185.jpg"><figcaption class="none"> Cala de l'illa roja</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b> Cala de l'illa Roja</b><br>
+                                Illa Roja é uma praia de nudismo em Begur, no norte do município. Consiste em dois aros de areia no sopé de um penhasco de uma rocha vermelha com a forma de um número 3 invertido - o que faz com que a praia fique na sombra no meio da tarde.                             </div>
+                             </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona10.jpg" %}' class="img" alt="">
+                           <a href="https://prod-assets.onepark.fr/media/W1siZiIsIjIwMTcvMTEvMjEvMTUvMjIvMTYvNTUzL09uZXBhcmtfUGFya2luZ18yMEFlcm9wdWVydG9fMjBkZV8yMEdpcm9uYV9Ib3RlbF8yMFNhbGxfQzNfQThzXzIwQWVyb3BvcnRfMjBkZV8yMEdpcm9uYS5qcGciXSxbInAiLCJ0aHVtYiIsIjcyOHg3MjgjIix7ImZvcm1hdCI6ImpwZyJ9XV0/Parking%20Hotel%20SALL%C3%89S%20HOTELS%20AEROPORT%20GIRONA%20%28Exterior%29?sha=f7044968af3edce8"><figcaption class="none">Hotel Aeroport</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                 <b>Hotel Aeroport Girona</b><br>
+                                É um hotel de quatro estrelas recentemente construído em Riudellots de la Selva, encontra-se centralizado estando apenas a 800 metros do aeroporto de Girona.
+                                O hotel tem um design minimalista. Dispõe de restaurante, bar, dois salões, cyber corner, parking, piscina exterior, ginásio e uma magnífica zona de Spa.</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona11.jpg" %}' class="img" alt="">
+                           <a href="https://lh5.googleusercontent.com/p/AF1QipPoKlGJNmYyB1fN7ahI4B02jeseYUfdB48iiFc=w325-h215-k-no"><figcaption class="none">Hotel Carlemany</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                 <b> Hotel Carlemany </b> <br>
+                                 Inaugurado em 1994, este hotal de luxo com fachada em vidro elegante e moderno fica a 5 minutos a pé da estação ferroviária de Girona e a 1 km do Museu de Arte de Girona.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona12.jpg" %}' class="img" alt="">
+                           <a href="https://hotelsultoniagirona.com/wp-content/uploads/2018/11/Hotel-Ultonia-Exterior.jpg"><figcaption class="none">Hotel Ultonia</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Hotel Ultonia</b> <br>
+                                Bem no centro de Girona, enraizado na história e no patrimônio da cidade desde 1962, está localizado este hotel a poucos minutos a pé das principais atrações. <br><br>
+                                <i>Porque nada melhor do que descobrir a bela cidade de Girona de dentro do seu coração.</i></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src= '{% static "ProjetoPW/images/Celler/girona13.jpg" %}' class="img" alt="">
+                           <a href="https://espanarusa.com/files/autoupload/82/86/76/kph4l3tc319875.jpg.[pr].jpg"><figcaption class="none">Parc de la Devesa</figcaption></a>
+                           <div class="middle">
+                            <div class="text">
+                                <b>Parc de la Devesa</b> <br>
+                               É o maior parque urbano, está localizado entre os rios Ter , Oñar e Güell , a oeste do centro histórico da cidade.
+                               Com uma área de 40 hetares, dos quais nove são caminhos sombreados, cobertos pelas abóbadas que formam as copas dos plátanos centenários - o parque possui cerca de 2.605 plátanos.</div>
+                           </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona14.png" %}' class="img" alt="">
+                           <a href="https://www.villaexpert.nl/download/images?name=pages%2F2017-09-29+15.20.33.jpg"><figcaption class="none">Museu del Cinema Tomàs Mallol</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Museu del Cinema Tomàs Mallol</b><br>
+                                 Foi criado a partir da Coleção Tomàs Mallol de objetos pré-cinema e cinematográficos, adquirida em 1994 pela Câmara Municipal de Girona. O museu foi inaugurado em 8 de abril de 1998, o primeiro que abriga uma variedade de materiais de cinema e pré-cinema.
+                                 Além da exposição permanente expõe a Coleção Tomàs Mallol, uma viagem por 400 anos da história da imagem em movimento.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="columnImg">
+                        <div class="gallery-item">
+                        <div class="image">
+                           <img src='{% static "ProjetoPW/images/Celler/girona15.jfif" %}' class="img" alt="">
+                           <a href="https://www.villaexpert.nl/download/images?name=pages%2F2017-09-29+15.20.33.jpg"><figcaption class="none"> Aiguablava</figcaption></a>
+                            <div class="middle">
+                             <div class="text">
+                                <b>Aiguablava</b> <br>
+                                É uma praia de águas cristalinas com areia fina e dourada. Seu fundo azulado e raso fazem dela uma das praias mais famosas da Costa Brava. A sua posição, a sul de Begur e com vistas privilegiadas sobre a baía e o cabo de Begur, permite o acesso tanto por estrada como por barco. É uma praia exclusiva, considerada por muitos a mais bonita da Costa Brava.
+                             </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+{% endblock article %}
+
+{% block footer %}
+    <div class="redes_sociais">
+                <a href="https://www.instagram.com/cellercanroca/" target="_blank"><span class="instagram"></span>Instagram</a>
+                <a href="https://www.facebook.com/ElCellerdeCanRoca/" target="_blank"><span class="facebook"></span>Facebook</a>
+    </div>
+{% endblock footer %}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+  <meta name="description" content="Website sobre os 3 melhores restaurantes do mundo">
+  <meta name="keywords" content="Mirazur, El Celler de Can Roca, Noma">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gastronomia no mundo</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
+  <link rel="stylesheet" href="estilos1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .parallax {
+            background-image: url(images/noma/noma_capa.jpg);
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed{
+            height: 30px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        h1{
+          text-align: center;
+          font-size: 4vw;
+          font-family: 'New Tegomin', serif;
+        }
+        h2{
+            text-align: center;
+            color:rgb(94, 71, 42);
+        }
+        h3{
+            color:rgb(68, 61, 50);
+            text-align: center;
+        }
+        h5{
+            text-align: center;
+            color:rgb(163, 112, 30);
+            font-size: 0.8vw;
+        }
+        .header{
+            color:rgb(190, 167, 131);
+        }
+        .nav{
+            background-color: rgb(190, 167, 131);
+        }
+        .nav a{
+            background-color: rgb(190, 167, 131);
+        }
+        .footer{
+            background-color: rgb(190, 167, 131);
+        }
+
+        .linha{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+        .linha2{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+        #circular{
+            border-radius: 120px;
+        }
+        #half_circulo{
+        border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax"></div>
+
+    <!--Nav-->
+    <div class="nav">
+        <nav>
+           <a href="nomaIntroducao.html"> Apresentação </a>
+            <a href="nomaPinteresse.html"> Pontos de Interesse </a>
+            <b><a href="nomaCozinha.html"> Cozinha </a></b>
+            <a href="index.html"> Home </a>
+        </nav>
+    </div>
+
+    <!--Header-->
+    <div class="header">
+        <header>
+            <h1>Noma</h1>
+        </header>
+    </div>
+
+    <!--Item Auxiliar-->
+    <div class="itemAuxiliar">
+        <div class="row1">
+          <div class="columnPagina" style="background-color: rgb(190, 167, 131);">
+                <br>
+                <center><i class="fa fa-video-camera" style="font-size:4vw;color:rgb(238, 238, 238)"></i></center>
+                <br>
+                <h3>Vídeos do Chefe</h3>
+                <center><a href="#section">Clique aqui</a></center>
+          </div>
+
+          <div class="columnPagina" style="background-color:rgb(131, 115, 89)">
+                <br>
+                <center><i class="fa fa-cutlery" style="font-size:4vw;color: rgb(238, 238, 238);"></i></center>
+                <br>
+                <h3>Pratos do Chefe</h3>
+                <center><a href="#article">Clique aqui</a></center>
+          </div>
+
+          <div class="columnPagina" style="background-color: rgba(211, 207, 188, 0.884);">
+                <br>
+                <center><i class="fa fa-user-circle-o" style="font-size:4vw;color:rgb(238, 238, 238)"></i></center>
+                <br>
+                <h3>Acerca do Chefe</h3>
+                <center><a href="#aside">Clique aqui</a></center>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+
+        <!--Section-->
+        <div class="section">
+        <section>
+            <div id="section">
+                <h5>Reinvenção do Melhor Restaurante, 2018</h5>
+                <div class="container_video">
+                    <center><iframe class="responsive-iframe" src="https://www.youtube.com/embed/v5XtgodI5Ww" ></iframe></center>
+                </div>
+                <center><details>
+                        <summary>Saber mais</summary>
+                        <p>O chef-proprietário Rene Redzepi fechou o seu restaurante premiado para repensar tudo. Este vídeo entra nos bastidores do novo Noma nos seus dias finais antes da reabertura.</p>
+                </details></center>
+                <br>
+
+
+                <h5>As receitas do Chefe</h5>
+                <div class="container_video">
+                    <center><iframe class="responsive-iframe" src="https://www.youtube.com/embed/GiYmVOZdd6E" ></iframe></center>
+                </div>
+                <center><details>
+                        <summary>Saber mais</summary>
+                        <p>Redzepi ensina a cozinhar um dos pratos exclusivos do Noma, perfeito para se comer à beira-mar no verão.</p>
+                </details></center>
+
+                <br><br>
+                <div class="container_video">
+                    <center><iframe class="responsive-iframe" src="https://www.youtube.com/embed/LhKQ4GtxYUs" ></iframe></center>
+                </div>
+                <center><details>
+                        <summary>Saber mais</summary>
+                        <p>René Redzepi ensina a cozinhar o prato "ostra cozida no vapor", um dos pratos de assinatura do Noma. A inspiração e execução do prato são explicadas pelo homem por trás do menu.</p>
+                </details></center>
+            </div>
+        </section>
+        </div>
+
+        <!--Conteúdo Principal // Main-->
+        <div class="main">
+        <main>
+            <h2>Cozinha de René Redzepi</h2>
+            <center><p><b>Prato da Nova Cozinha Nórdica da Autoria do Chefe confecionados no seu restaurante:</b></p></center>
+
+            <div class="linha">
+                <figure><img src="images/noma/prato1.jpg"  class="img" id="circular"></figure>
+                <a href="https://media-cdn.tripadvisor.com/media/photo-s/11/50/dd/19/entree.jpg"><figcaption class="none">Prato Nova cozinha Nórdica</figcaption></a>
+                <figure><img src="images/noma/prato2.jpg"  class="img" id="circular"></figure>
+                <a href="https://upload.wikimedia.org/wikipedia/commons/7/7f/Flickr_-_cyclonebill_-_Marv_med_syltede_gr%C3%B8ntsager.jpg"><figcaption class="none">Prato Nova cozinha Nórdica</figcaption></a>
+            </div>
+            <p>&ensp;René Redzepi é conhecido pelo o seu trabalho sobre a reinvenção e refinamento de uma <u>Nova Cozinha Nórdica</u> e alimentos que caracterizam a criatividade e sabores limpos.</p>
+            <p>&ensp;A nova cozinha nórdica foi impulsionada e inspirada por ideias de um ativista alimentar. Tem sido utilizada para promover o local, natureza e sazonalidade de produtos como base para novos pratos.</p>
+
+            <p>&ensp;O Chefe do Noma valoriza os ingredientes locais, como ouriço-do-mar, banha de porco, batatas, toucinho, algas, vieiras, camarões, pera e prega a sustentabilidade.
+            <p>&ensp;Os produtos frescos do restaurante e a experiência de provar um cardápio totalmente controlado pela equipa de chefes é o que faz haver tanto sucesso.</p>
+
+            <center><figure><img src="images/noma/noma_foto8.jpg" class="img"></figure></center>
+            <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.theworlds50best.com%2Fthe-list%2F1-10%2FNoma.html&psig=AOvVaw2zxazFAiQ3WR9fTmkJDWVR&ust=1617650485991000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCLCxmemn5e8CFQAAAAAdAAAAABAN"><figcaption class="none">Prato</figcaption></a>
+
+            <center><p><i>"O Noma não existiria sem os produtos que usa"</i>, disse um responsável. </p></center>
+            <p>&ensp; Com o decorrer da pandemia os negócios de restauração viram-se obrigados a parar sem saber quando voltariam a reabrir, assim restaurante Noma teve de reinventar, transformo-se num wine bar e hamburgueria por um tempo limitado, sem reservas e através de take-away.</p>
+
+            <div class="linha">
+                <figure><img src="images/noma/hamburguer.jpg"  class="img" id="circular"></figure>
+                <a href="https://media-cdn.tripadvisor.com/media/photo-s/11/50/dd/19/entree.jpg"><figcaption class="none">Prato Nova cozinha Nórdica</figcaption></a>
+
+                <figure><img src="images/noma/hamburguer1.jpg"  class="img" id="circular"></figure>
+                <a href="https://upload.wikimedia.org/wikipedia/commons/7/7f/Flickr_-_cyclonebill_-_Marv_med_syltede_gr%C3%B8ntsager.jpg"><figcaption class="none">Prato Nova cozinha Nórdica</figcaption></a>
+            </div>
+        </main>
+        </div>
+
+        <!--Aside-->
+        <div class="aside">
+        <aside>
+            <div id="aside">
+                <h2>Chefe René Redzepi</h2>
+                <figure><img src="images/noma/cozinheiro.jpg" height="" witdh=""class="img"></figure>
+                <a href="http://2.bp.blogspot.com/_GlnzWUyWCHs/TEoJl0g6vQI/AAAAAAAABko/uK2AjN7-XLs/s1600/nomarestaurantchefredzepi.jpg"><figcaption class="none">Cozinheiro</figcaption></a>
+                <center><a href="https://www.instagram.com/reneredzepinoma/"> 👨🏽‍🍳 Descubra mais </a></center>
+
+                <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#128198; Nascimento:</b> 16 de dezembro de 1977, Copenhaga, Dinamarca</p>
+                <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#8987; Idade:</b> 43 anos</p>
+                <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#127891; Formação:</b> Cooking school </p>
+                <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#129505; Estilo de cozinha:</b> Nova Gastronomia Molecular da Cozinha Nórdica</p>
+            </div>
+        </aside>
+        </div>
+
+        <!--Article-->
+        <div class="article">
+        <article>
+            <div id="article">
+                <div class="column" >
+                    <div class="gallery-item">
+                        <div class="image">
+                        <figure><img src="images/noma/prato3.jpg" class="img"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column" >
+                    <div class="gallery-item">
+                        <div class="image">
+                        <figure><img src="images/noma/prato4.jpg" class="img"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column" >
+                    <div class="gallery-item">
+                        <div class="image">
+                        <figure><img src="images/noma/prato5.jpg" class="img"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column" >
+                    <div class="gallery-item">
+                        <div class="image">
+                        <figure><img src="images/noma/prato6.jpg" class="img"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        </div>
+
+    </div>
+
+    <div class="parallax"></div>
+
+    <!--Footer-->
+    <div class="footer">
+        <footer>
+            <p> Universade Lusófona de Humanidades e Tecnologias </p>
+            <div class="redes_sociais">
+                <a href="https://www.instagram.com/nomacph/" target="_blank"><span class="instagram"></span>Instagram</a>
+                <a href="https://www.facebook.com/nomacph/" target="_blank"><span class="facebook"></span>Facebook</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

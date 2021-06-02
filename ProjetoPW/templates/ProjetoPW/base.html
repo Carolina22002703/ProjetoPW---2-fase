@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website sobre os 3 melhores restaurantes do mundo">
+    <meta name="keywords" content="Mirazur, El Celler de Can Roca, Noma">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gastronomia no Mundo</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'ProjetoPW/images/mundo.png' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css%22%3E">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ProjetoPW/css/base.css' %}">
+
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+
+    <div class="parallax"></div>
+
+    <!--Nav-->
+    <div class="nav">
+        <nav>
+           {% block nav %}
+           {% endblock nav %}
+        </nav>
+    </div>
+
+    <!--Header-->
+    <div class="header">
+        <header>
+            {% block header %}
+            {% endblock header %}
+        </header>
+    </div>
+
+    <!--Item Auxiliar-->
+     <div class="itemAuxiliar">
+        {% block itemAuxiliar %}
+        {% endblock itemAuxiliar %}
+      </div>
+
+     <div class="grid-container">
+
+        <!--Section-->
+        <div class="section">
+            <div id="section">
+                <section>
+                    {% block section %}
+                    {% endblock section %}
+                </section>
+            </div>
+        </div>
+
+        <!--Conteúdo Principal // Main-->
+        <div class="main">
+            <main>
+                {% block main %}
+                {% endblock main %}
+            </main>
+        </div>
+
+       <!--Aside-->
+       <div class="aside">
+           <div id="aside">
+               <aside>
+                   {% block aside %}
+                   {% endblock aside %}
+                </aside>
+           </div>
+       </div>
+
+        <!--Article-->
+        <div class="article">
+            <article>
+                {% block article %}
+                {% endblock article %}
+            </article>
+        </div>
+
+    </div>
+
+    <div class="parallax"></div>
+
+    <footer>
+        <div class="footer">
+            <p> Universade Lusófona de Humanidades e Tecnologias </p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'ProjetoPW/base.html' %}
+
+{% block header %}
+    <h1>Ficha de Contacto</h1>
+{% endblock header %}
+
+{% block main %}
+     {% for usuario in usuarios %}
+        <p>
+            <a href="{% url 'ProjetoPW:edita' usuario.id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
+                Editar
+            </a>
+        </p>
+   {% endfor %}
+    <a href="{% url 'ProjetoPW:listar' %}" class="btn btn-success btn-block"> Novo Contacto</a>
+{% endblock main %}

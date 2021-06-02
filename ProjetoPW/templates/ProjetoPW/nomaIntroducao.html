@@ -1,0 +1,226 @@
+{% extends "ProjetoPW/base.html" %}
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoPW/images/noma/noma_capa.jpg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed{
+            height: 30px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        h1{
+          text-align: center;
+          font-size: 4vw;
+          font-family: 'New Tegomin', serif;
+        }
+        h2{
+            text-align: center;
+            color:rgb(94, 71, 42);
+        }
+        h3{
+            color:rgb(68, 61, 50);
+            text-align: center;
+        }
+        .header{
+            color:rgb(190, 167, 131)
+        }
+        .nav{
+            background-color: rgb(190, 167, 131)
+        }
+        .nav a{
+            background-color: rgb(190, 167, 131)
+        }
+        .footer{
+            background-color: rgb(190, 167, 131)
+        }
+
+        .linha{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+        .linha2{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+        #circular{
+            border-radius: 120px;
+        }
+        #half_circulo{
+        border-radius: 50px;
+        }
+    </style>
+{% endblock head %}
+
+    <!--Nav-->
+{% block nav %}
+    <b><a href="nomaIntroducao.html"> Apresentação </a></b>
+    <a href="nomaPinteresse.html"> Pontos de Interesse </a>
+    <a href="nomaCozinha.html"> Cozinha </a>
+    <a href="index.html"> Home </a>
+{%  endblock nav %}
+
+    <!--Header-->
+{% block header %}
+     <h1>Noma</h1>
+{% endblock header%}
+
+    <!--Item Auxiliar-->
+{% block itemAuxiliar %}
+    <div class="row1">
+          <div class="column" style="background-color: rgb(190, 167, 131);">
+          <br>
+          <i class="fa fa-user" style="font-size:4vw;color: rgb(238, 238, 238);"></i>
+          <br>
+          <h3>Comentários do Restaurante</h3>
+          <p>Alguns comentários</p>
+          <a href="#article">Clique aqui</a>
+          </div>
+
+          <div class="column" style="background-color:rgb(131, 115, 89)">
+          <br>
+          <i class="fa fa-phone" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+          <br>
+          <h3>Se Prenteder Reservar</h3>
+          <p>Seja rápido e reserve aqui</p>
+          <a href="#section">Clique aqui</a>
+          </div>
+
+          <div class="column" style="background-color: rgba(211, 207, 188, 0.884);">
+          <br>
+          <i class="fa fa-map-pin" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+          <br>
+          <h3>Descobra Onde Se Localiza</h3>
+          <p>Faça a ligação rapidamente</p>
+          <a href="#aside">Clique aqui</a>
+          </div>
+
+          <div class="column" style="background-color: rgba(196, 179, 84, 0.87);">
+          <br>
+          <i style="font-size:4vw;color: rgb(238, 238, 238);" class="fa">&#xf002;</i>
+          <br>
+          <h3>Acerca do Restaurante</h3>
+          <p>Descobra mais</p>
+          <a href="#main">Clique aqui</a>
+
+          </div>
+        </div>
+{% endblock itemAuxiliar %}
+
+        <!--Section-->
+    {% block section %}
+        <div class="reserva" id="section">
+            <div class="reserva_header">
+                <img src='{% static "ProjetoPW/images/noma/noma_reserva.jpg" %}' class="img" alt="">
+            </div>
+            <div class="reserva_middle">
+                <h2 class="reserva_middle_name"> Reserva </h2>
+            </div>
+            <p class="reserva_texto"> Se a data desejada não estiver disponível, recomenda-se que insira o seu nome na lista de espera online. Será notificado se houver disponibilidade.</p>
+            <p class="reserva_texto"> O pagamento do menu é necessário para confirmar a reserva durante o processo de reserva online.</p>
+            <p class="reserva_texto"><b>&#128241; Telemóvel: +45 3296 3297 </b></p>
+            <p class="reserva_texto"><b>&#9993; Email:</b> noma@noma.dk</p>
+            <p class="reserva_texto"><b>&#127759; Localização:</b> <a href="https://www.google.com/maps/place/El+Celler+De+Can+Roca/@41.9933774,2.805826,17z/data=!3m1!4b1!4m5!3m4!1s0x12bae711df335e93:0x27068e002439c4fa!8m2!3d41.9933774!4d2.8080147">Google Maps</a></p>
+            <p class="reserva_texto"><b>&#127760; Site:</b> <a href="https://noma.dk/">Clique aqui</a></p>
+            <br>
+            <a href="https://noma.dk/reservations/"><button style="font-size:1vw;color:rgba(196, 179, 84, 0.87);">Clique para reservar <i class="fa fa-calendar-check-o"></i></button></a>
+        </div>
+    {% endblock section%}
+
+    <!--Conteúdo Principal-->
+{% block main %}
+        <div id="main">
+           <h2>Sobre...</h2>
+           <table>
+               <td>
+                   <p>&ensp;<b>Noma</b> é um restaurante com ⭐⭐ Michelin dirigido pelo chef René Redzepi. O nome é uma abreviatura silábica das duas palavras dinamarquesas "no rdisk" (nórdico) e "ma d" (comida).</p>
+                   <p>&ensp;Inaugurado em 2003, o restaurante é conhecido pela sua reinvenção e interpretação da cozinha nórdica.</p>
+                   <p>&ensp;Em 2010, 2011, 2012 e 2014, foi classificado como o Melhor Restaurante do Mundo pela revista Restaurant - a partir de 2019, ficou em 2º lugar.</p>
+               </td>
+               <td>
+                   <figure><img src='{% static "ProjetoPW/images/noma/noma_foto1.jpg" %}' class="img" alt=""></figure>
+                   <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.dinesen.com%2Fde%2Finspiration%2Fnoma-20%2F&psig=AOvVaw2lbSQL8v6I39AZokVfIlmL&ust=1617636867268000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCOisvYr15O8CFQAAAAAdAAAAABAD"><figcaption class="none">Restaurante</figcaption></a>
+               </td>
+           </table>
+
+           <figure><img src='{% static "ProjetoPW/images/noma/noma_foto2.jpg" %}' class="img" id="half_circulo" alt=""></figure>
+           <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.dinesen.com%2Fde%2Finspiration%2Fnoma-20%2F&psig=AOvVaw2lbSQL8v6I39AZokVfIlmL&ust=1617636867268000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCOisvYr15O8CFQAAAAAdAAAAABAD"><figcaption class="none">Restaurante</figcaption></a>
+
+           <table>
+               <td>
+                   <p>&ensp;A localização original do Noma era um antigo armazém à beira-mar no bairro de Christianshavn, no centro de Copenhague.</p>
+                   <p>&ensp;<b style="color:rgb(83, 69, 20)">A culinária do Noma é nórdica/escandinava. &#128558;</b></p>
+                   <p>&ensp;Pratos famosos incluem 'A Galinha e o Ovo', uma refeição preparada pelos próprios comensais que consiste em batatas fritas, um ovo de pato selvagem, feno levemente húmido, sal, ervas, plantas silvestres silvestres, óleo de feno, tomilho, manteiga e molho de alho selvagem. </p>
+               </td>
+               <td>
+                   <figure><img src='{% static "ProjetoPW/images/noma/noma_foto3.jpg" %}' class="img" alt=""></figure>
+                   <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Ftrendinline.com%2Fnew%2Fnoma-copenhagen%2F&psig=AOvVaw2lbSQL8v6I39AZokVfIlmL&ust=1617636867268000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCOisvYr15O8CFQAAAAAdAAAAABAd"><figcaption class="none">Restaurante</figcaption></a>
+               </td>
+           </table>
+
+           <div class="linha">
+               <figure><img src='{% static "ProjetoPW/images/noma/noma_foto4.jpg" %}' height="200px" class="img" id="circular" alt=""></figure>
+               <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.archdaily.com.br%2Fbr%2F902616%2Fnovo-restaurante-noma-projetado-pelo-big-e-inaugurado-em-copenhague&psig=AOvVaw2Vt6q5zrp7mrV6414Xdat1&ust=1617637748239000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCLiL57D45O8CFQAAAAAdAAAAABAX"><figcaption class="none">Jardin</figcaption></a>
+
+               <figure><img src={% static "ProjetoPW/images/noma/noma_fot5.jpg" %} height="200px" class="img" id="circular" alt=""></figure>
+               <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.archdaily.com.br%2Fbr%2F902505%2Fnoma-big&psig=AOvVaw2Vt6q5zrp7mrV6414Xdat1&ust=1617637748239000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCLiL57D45O8CFQAAAAAdAAAAABAd"><figcaption class="none">Restaurante</figcaption></a>
+
+               <figure><img src='{% static "ProjetoPW/images/noma/noma_foto6.jpg" %}' height="200px" class="img" id="circular" alt=""></figure>
+               <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.archdaily.com.br%2Fbr%2F902616%2Fnovo-restaurante-noma-projetado-pelo-big-e-inaugurado-em-copenhague&psig=AOvVaw2Vt6q5zrp7mrV6414Xdat1&ust=1617637748239000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCLiL57D45O8CFQAAAAAdAAAAABAk"><figcaption class="none">Restaurante</figcaption></a>
+           </div>
+        </div>
+{% endblock main%}
+
+        <!--Aside-->
+{% block aside %}
+        <div class="reserva" id="aside">
+            <div class="reserva_header">
+                <img src='{% static "ProjetoPW/images/noma/noma_local.png" %}' class="img" alt="">
+            </div>
+            <div class="reserva_middle">
+                <h2 class="reserva_middle_name"> Localização </h2>
+            </div>
+            <p class="reserva_texto"><b>&#127980; Estabelecimento:</b> 2003</p>
+            <p class="reserva_texto"><b>&#127860; Chefe de Cozinha:</b> René Redzepi</p>
+            <p class="reserva_texto"><b>&#127759; País:</b> Dinamarca</p>
+            <p class="reserva_texto"><b>&#128172; Reservas:</b> Essencial</p>
+        </div>
+{% endblock aside%}
+
+        <!--Article-->
+{% block article %}
+        <div id="article">
+            <h2>&#128106; Comentários</h2>
+
+            <div class="linha">
+                <figure><img src='{% static "ProjetoPW/images/noma/noma_comentario1.png" %}' class="img" alt=""></figure>
+                <a href="https://www.google.pt/maps/place/Noma/@55.6828273,12.6082921,17z/data=!4m7!3m6!1s0x4652533b679080a5:0x42eaecc5eb37e114!8m2!3d55.6828273!4d12.6104808!9m1!1b1?hl=pt-PT"><figcaption class="none">Comentario</figcaption></a>
+
+                <figure><img src='{% static "ProjetoPW/images/noma/noma_comentario2.png" %}' class="img" alt=""></figure>
+                <a href="https://www.google.pt/maps/place/Noma/@55.6828273,12.6082921,17z/data=!4m7!3m6!1s0x4652533b679080a5:0x42eaecc5eb37e114!8m2!3d55.6828273!4d12.6104808!9m1!1b1?hl=pt-PT"><figcaption class="none">Comentario</figcaption></a>
+
+                <figure><img src='{% static "ProjetoPW/images/noma/noma_comentario3.png" %}' class="img" alt=""></figure>
+                <a href="https://www.google.pt/maps/place/Noma/@55.6828273,12.6082921,17z/data=!4m7!3m6!1s0x4652533b679080a5:0x42eaecc5eb37e114!8m2!3d55.6828273!4d12.6104808!9m1!1b1?hl=pt-PT"><figcaption class="none">Comentario</figcaption></a>
+            </div>
+        </div>
+{% endblock article %}
+
+    <!--Footer-->
+{% block footer %}
+        <p> Universade Lusófona de Humanidades e Tecnologias </p>
+        <div class="redes_sociais">
+            <a href="https://www.instagram.com/nomacph/" target="_blank"><span class="instagram"></span>Instagram</a>
+            <a href="https://www.facebook.com/nomacph/" target="_blank"><span class="facebook"></span>Facebook</a>
+        </div>
+{% endblock footer%}

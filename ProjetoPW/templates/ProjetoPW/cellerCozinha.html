@@ -1,0 +1,169 @@
+{% extends 'ProjetoPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoPW/images/Celler/celler_capa.jpg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed{
+            height: 30px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        h1{
+          text-align: center;
+          font-size: 4vw;
+          font-family: 'New Tegomin', serif;
+        }
+        h2{
+            text-align: center;
+            color:rgb(228, 172, 99);
+        }
+        h3{
+            color:rgb(85, 82, 73);
+            text-align: center;
+        }
+        .header{
+            color :rgb(199, 142, 57);
+        }
+        .nav{
+            background-color: rgb(199, 142, 57);
+        }
+        .nav a{
+            background-color: rgb(199, 142, 57);
+        }
+        .footer{
+            background-color: rgb(199,142,57);
+        }
+
+        .linha{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+    </style>
+{% endblock head %}
+
+{% block nav %}
+    <b><a href="cellerIntroducao.html"> Apresentação </a></b>
+    <a href="cellerPinteresse.html"> Pontos de Interesse </a>
+    <a href="cellerCozinha.html"> Cozinha </a>
+    <a href="index.html"> Home </a>
+{% endblock nav %}
+
+{% block header %}
+    <h1>El Celler De Can Roca</h1>
+{% endblock header %}
+
+{% block itemAuxiliar %}
+    <div class="row1">
+          <div class="columnPagina" style="background-color: rgb(190, 167, 131);">
+          <br>
+                <i class="fa fa-video-camera" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+                <br>
+                <h3>Vídeos do Chefe</h3>
+                <a href="#section">Clique aqui</a>
+          </div>
+
+          <div class="columnPagina" style="background-color:rgb(131, 115, 89)">
+                <br>
+                <i class="fa fa-group" style="font-size:4vw;color: rgb(238, 238, 238);"></i>
+                <br>
+                <h3>História Chefes</h3>
+                <a href="#imagens">Clique aqui</a>
+          </div>
+
+          <div class="columnPagina" style="background-color: rgba(211, 207, 188, 0.884);">
+                <br>
+                <i class="fa fa-user-circle-o" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+                <br>
+                <h3>Acerca do Chefe</h3>
+                <a href="#aside">Clique aqui</a>
+          </div>
+        </div>
+{% endblock itemAuxiliar %}
+
+{% block section %}
+    <h5> O legendário Restaurante de Girona</h5>
+        <div class="container_video">
+            <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/L-tOtP-ISxQ" ></iframe>
+        </div>
+    <details>
+        <summary>Saber mais</summary>
+            <p>Entre no lendário restaurante El Celler de Can Roca em Espanha.</p>
+    </details>
+    <br><br>
+
+    <h5> O Chef</h5>
+    <div class="container_video">
+        <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/61tPg-Fd-ac"></iframe>
+    </div>
+    <details>
+        <summary>Saber mais</summary>
+        <p>O espanhol Jordi Roca foi eleito o melhor chef pasteleiro do mundo pela revista Restaurante. Desde 2002, a revista britânica elege anulamente os 50 melhores restaurantes do mundo. Mais de 800 chefs, gourmets e críticos gastronômicos fazem parte do grupo de especialistas.</p>
+    </details>
+    <br><br>
+{% endblock section %}
+
+{% block main %}
+     <h2>Chef Joan Roca</h2>
+               <p><i>“Nosso sonho era construir um lugar em que fôssemos felizes fazendo o que gostamos”</i></p>
+
+               <p>&ensp;Combinações simples de sabores são combinadas com técnicas de gastronomia molecular e apresentações incomuns de alimentos.</p>
+               <p>&ensp;O Guia Michelin descreve o tipo de cozinha produzida por El Celler de Can Roca simplesmente como "criativa", enquanto Edward Owen do The Times disse que era uma "fusão de pratos tradicionais com toques surrealistas ". As técnicas incluem o congelamento de lulas com nitrogênio líquidoe então misturado para ser canalizado e cozido em um cracker.</p>
+
+               <div class="linha">
+
+                   <figure><img src='{% static "ProjetoPW/images/Celler/celer_prato1.jpg" %}' class="img" id="circular" alt=""></figure>
+                   <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.royist.com%2Fculinary%2Fdiscover-el-celler-de-can-roca-girona-spain%2F&psig=AOvVaw2-aSu7da9oWgel61FqgYRD&ust=1617648854981000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCNjnn9-h5e8CFQAAAAAdAAAAABAD"><figcaption class="none">Prato</figcaption></a>
+
+                   <figure><img src='{% static "ProjetoPW/images/Celler/celer_prato2.jpg" %}'  class="img" id="circular" alt=""></figure>
+                   <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F397935317053289904%2F%3Famp_client_id%3DCLIENT_ID(_)%26mweb_unauth_id%3D%7B%7Bdefault.session%7D%7D%26from_amp_pin_page%3Dtrue&psig=AOvVaw1wXxB5bR89Sutkgqunv-Va&ust=1617470869171000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCKjp5dqK4O8CFQAAAAAdAAAAABAQ"><figcaption class="none">Prato 2</figcaption></a>
+
+                   <figure><img src='{% static "ProjetoPW/images/Celler/celer_prato3.jpg" %}'  class="img" id="circular" alt=""></figure>
+                   <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fmorewithlessdesign.com%2Fen%2Fel-celler-de-can-roca%2F&psig=AOvVaw1wXxB5bR89Sutkgqunv-Va&ust=1617470869171000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCKjp5dqK4O8CFQAAAAAdAAAAABAq"><figcaption class="none">Prato 3</figcaption></a>
+
+               </div>
+              <p><b style="color:rgb(216, 164, 146)">A cozinha de Joan é inspirada nos perfumes!</b></p>
+
+               <figure><img src='{% static "ProjetoPW/images/Celler/celer_exterior.jpg" %}' class="img" alt=""></figure>
+               <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fgq.globo.com%2FSabor%2Fnoticia%2F2013%2F04%2Fel-celler-de-can-roca-e-nomeado-o-melhor-restaurante-do-mundo.html&psig=AOvVaw1HcEof-ImGRK4_3WUH7NOs&ust=1617625141795000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCJDv_7PJ5O8CFQAAAAAdAAAAABAD"><figcaption class="none">Exterior</figcaption></a>
+
+               <table id="imagens">
+                   <td>
+                       <figure><img src='{% static "ProjetoPW/images/Celler/irmaos.jpg" %}' id="half_circulo" class="img" alt=""></figure>
+                       <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.bbva.com%2Fen%2Fel-celler-de-can-roca-remains-podium-world-cuisine%2F&psig=AOvVaw2twkwz5IE54zKAiA2fEB6n&ust=1617625197585000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCPjii87J5O8CFQAAAAAdAAAAABAD"><figcaption class="none">Chefs</figcaption></a>
+                   </td>
+                   <td>
+                       <p>&ensp;O irmão mais velho, Joan Roca, é o chefe principal. Josep Roca, o irmão do meio, é o sommelier. O irmão mais novo, é encarregado das sobremesas.</p>
+                       <p>&ensp;Por causa do trabalho no restaurante, os irmãos apareceram na <a href="https://online.hbs.edu/?c1=GAW_SE_NW&source=INTL_BRND&cr2=search__-__nw__-__international__-__branded&kw=harvard_phm&cr5=423687021322&cr7=c&hsa_cam=1396947326&hsa_grp=55267258975&hsa_mt=p&hsa_src=g&hsa_ad=423687021322&hsa_acc={792-723-8641}&hsa_net=adwords&hsa_kw=harvard&hsa_tgt=kwd-45930261&hsa_ver=3&gclid=CjwKCAjw9r-DBhBxEiwA9qYUpbg2e7MYljYXh_V7G0ILt1m6q5LCUdmAJwwRCmlGnPjqBQTgw8juZRoCXKIQAvD_BwE">Universidade Harvard</a>, nos Estados Unidos, como parte do programa Ciência e Culinária.</p>
+                   </td>
+               </table>
+{% endblock main %}
+
+{% block aside %}
+    <figure><img src='{% static "ProjetoPW/images/Celler/celer_chef.jpg" %}'  class="img" id="half_circulo" alt=""></figure>
+    <a href="https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.bbva.com%2Fen%2Fel-celler-de-can-roca-remains-podium-world-cuisine%2F&psig=AOvVaw0k6tGczg3Dkie20q6Z4sSW&ust=1617622730350000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCNClkrzA5O8CFQAAAAAdAAAAABAD"><figcaption class="none">Chefs</figcaption></a>
+    <a href="https://www.instagram.com/jordirocasan/"> 👨🏽‍🍳 Descubra mais </a>
+
+    <p id="descricao" style="background-color:rgb(177, 145, 95);"><b>&#128198; Nascimento:</b> 11 de Fevereiro de 1964, Girona, Espanha</p>
+    <p id="descricao" style="background-color:rgb(177, 145, 95);"><b>&#8987; Idade:</b> 57 anos</p>
+    <p id="descricao" style="background-color:rgb(177, 145, 95);"><b>&#127891; Formação:</b> Escola d'Hotelaria de Girona</p>
+    <p id="descricao" style="background-color:rgb(177, 145, 95);"><b>&#128215; Publicações:</b> <a href="https://www.amazon.es/EL-CELLER-CAN-ROCA-Librooks/dp/8494456938">El Celler de Can Roca</a>, <a href="https://www.libreriagastronomica.com/la-cocina-al-vacio-joan-roca">La cocina al vacío</a>, <a href="https://www.fnac.pt/Cuina-de-la-meva-mare-la-ROCA-JOAN/a7187453">La cuina de la meva mare</a>, entre outros.</p>
+{% endblock aside %}
+
+{% block footer %}
+    <div class="redes_sociais">
+                <a href="https://www.instagram.com/cellercanroca/" target="_blank"><span class="instagram"></span>Instagram</a>
+                <a href="https://www.facebook.com/ElCellerdeCanRoca/" target="_blank"><span class="facebook"></span>Facebook</a>
+    </div>
+{% endblock footer %}
