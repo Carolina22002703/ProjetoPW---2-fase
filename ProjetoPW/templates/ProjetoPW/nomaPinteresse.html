@@ -63,7 +63,9 @@
     </style>
 {% endblock head %}
 
-<div class="parallax"></div>
+{% block body %}
+    <div class="parallax"></div>
+{% endblock body %}
 
     <!--Nav-->
     {% block nav %}
@@ -222,7 +224,9 @@
                 </div>
     {% endblock article%}
 
-<div class="parallax"></div>
+{% block body2 %}
+    <div class="parallax"></div>
+{% endblock body2 %}
 
     <!--Footer-->
     {% block footer %}

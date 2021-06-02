@@ -61,7 +61,9 @@
     </style>
 {% endblock head %}
 
+{% block body %}
     <div class="parallax"></div>
+{% endblock body %}
 
     <!--Nav-->
 {% block nav %}
@@ -217,7 +219,9 @@
     </div>
 {% endblock article %}
 
-    <div class="parallax"></div>
+{% block body2 %}
+        <div class="parallax"></div>
+{% endblock body2 %}
 
         <!--Footer-->
 {% block footer %}
@@ -226,3 +230,4 @@
         <a href="https://www.facebook.com/mirazur.fr" target="_blank"><span class="facebook"></span>Facebook</a>
     </div>
 {% endblock footer %}
+

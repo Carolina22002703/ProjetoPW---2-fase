@@ -21,7 +21,8 @@
 </head>
 
 <body>
-
+{% block body %}
+{% endblock body %}
     <!--Nav-->
     <div class="nav">
         <nav>
@@ -84,9 +85,14 @@
 
     </div>
 
+{% block body2 %}
+{% endblock body2 %}
+
     <footer>
         <div class="footer">
             <p> Universade Lusófona de Humanidades e Tecnologias </p>
+            {% block footer %}
+            {% endblock footer %}
         </div>
     </footer>
 

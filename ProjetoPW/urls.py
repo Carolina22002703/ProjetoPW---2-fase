@@ -13,18 +13,18 @@ urlpatterns = [
     path('mapa', views.mapa_page_view, name='mapa'),
 
     # Informacao
-    path('', views.informcao_page_view, name='informacao'),
+    path('informacao', views.informcao_page_view, name='informacao'),
 
     # Index
     path('index', views.index_page_view, name='index'),  # ERRO
 
     # Celler
     path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),
-    path('cellerCozinha', views.cellerCozinha_page_view, name='cellerCozinha'),
+    path('', views.cellerCozinha_page_view, name='cellerCozinha'),
     path('cellerPinteresse', views.cellerPinteresse_page_view, name='cellerPinteresse'),
 
     # Mirazur
-    path('mirazurIntroducao', views.mirazurIntroducao_page_view, name='mirazurIntroducao'),
+    path('mirazurIntrodução', views.mirazurIntroducao_page_view, name='mirazurIntroducao'),
     path('mirazurCozinha', views.mirazurCozinha_page_view, name='mirazurCozinha'),  # ERRO
     path('mirazurPinteresse', views.mirazurPinteresse_page_view, name='mirazurPinteresse'),
 
