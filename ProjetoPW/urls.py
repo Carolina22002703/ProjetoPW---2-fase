@@ -28,7 +28,7 @@ urlpatterns = [
 
     # Mirazur
     path('mirazurIntrodução', views.mirazurIntroducao_page_view, name='mirazurIntroducao'),
-    path('mirazurCozinha', views.mirazurCozinha_page_view, name='mirazurCozinha'),  # ERRO
+    path('mirazurCozinha', views.mirazurCozinha_page_view, name='mirazurCozinha'),
     path('mirazurPinteresse', views.mirazurPinteresse_page_view, name='mirazurPinteresse'),
 
     # Noma

@@ -441,7 +441,7 @@ a:active{
     top : 30%;
     left: 30%;
     width: 100%;
-    font-size: 0.5vw;
+    font-size: 1vw;
     position: absolute;
     text-align: center;
     -webkit-transform: translate(-50%, -50%);
