@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 class Usuario(models.Model):
     nome = models.CharField(max_length=30, null=False)
@@ -13,8 +12,9 @@ class Usuario(models.Model):
         return f"{self.nome} {self.apelido} {self.telefone} {self.email} {self.dataNascimento}"
 
 class Quizz(models.Model):
-    pergunta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="tiporesposta")
-    resposta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="tipopergunta")
+    utilizador = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="utilizador")
+    pergunta = models.CharField(max_length=50)
+    resposta = models.CharField(max_length=50)
     numero = models.IntegerField()
 
     def __str__(self):

@@ -69,8 +69,8 @@ def nomaPinteresse_page_view(request):
 
 #Quizz
 def quizz_page_view(request):
-    context = {'ProjetoPW': Quizz.objects.all()}
-    return render (request, 'ProjetoPW/quizz.html', context)
+    #context = {'ProjetoPW': Quizz.objects.all()}
+    return render (request, 'ProjetoPW/quizz.html') #, context
 
 
 # Contacto
