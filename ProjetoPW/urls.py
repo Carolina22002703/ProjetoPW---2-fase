@@ -7,10 +7,10 @@ app_name = "ProjetoPW"
 
 urlpatterns = [
     # Formulário
-    path('formulario', views.formulario_page_view, name='formulario'),
+    path('formulario/', views.formulario_page_view, name='formulario'),
 
     # Mapa
-    path('mapa', views.mapa_page_view, name='mapa'),
+    path('', views.mapa_page_view, name='mapa'),
 
     # Informacao
     path('informacao', views.informcao_page_view, name='informacao'),
@@ -19,7 +19,7 @@ urlpatterns = [
     path('index', views.index_page_view, name='index'),  # ERRO
 
     #Quizz
-    #path('', views.quizz_page_view, name='quizz'),
+    path('quizz', views.quizz_page_view, name='quizz'),
 
     # Celler
     path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),

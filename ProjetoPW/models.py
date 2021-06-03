@@ -12,10 +12,10 @@ class Usuario(models.Model):
     def __str__(self):
         return f"{self.nome} {self.apelido} {self.telefone} {self.email} {self.dataNascimento}"
 
-class Pergunta (models.Model):
-    pergunta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="resposta")
-    resposta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="pergunta")
+class Quizz(models.Model):
+    pergunta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="tiporesposta")
+    resposta = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="tipopergunta")
     numero = models.IntegerField()
 
     def __str__(self):
-        return f"{self.numero} {self.pergunta} ({self.resposta})"
+        return f"Pergunta {self.id}: {self.pergunta} to {self.resposta}"
