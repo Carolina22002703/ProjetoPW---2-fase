@@ -19,11 +19,11 @@ urlpatterns = [
     path('index', views.index_page_view, name='index'),  # ERRO
 
     #Quizz
-    path('quizz', views.quizz_page_view, name='quizz'),
+    #path('', views.quizz_page_view, name='quizz'),
 
     # Celler
     path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),
-    path('', views.cellerCozinha_page_view, name='cellerCozinha'),
+    path('cellerCozinha', views.cellerCozinha_page_view, name='cellerCozinha'),
     path('cellerPinteresse', views.cellerPinteresse_page_view, name='cellerPinteresse'),
 
     # Mirazur

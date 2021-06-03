@@ -13,11 +13,6 @@ def mapa_page_view(request):
     return render(request, 'ProjetoPW/mapa.html')
 
 
-# Quizz
-def quizz_page_view(request):
-    return render(request, 'ProjetoPW/quizz.html')
-
-
 # Informacao
 def informcao_page_view(request):
     return render(request, 'ProjetoPW/informacao.html')
@@ -68,8 +63,12 @@ def nomaCozinha_page_view(requeste):
     return render(requeste, 'ProjetoPW/nomaCozinha.html')
 
 
-def nomaPinteresse_page_view(requeste):
-    return render(requeste, 'ProjetoPW/nomaPinteresse.html')
+def nomaPinteresse_page_view(request):
+    return render(request, 'ProjetoPW/nomaPinteresse.html')
+
+
+#Quizz
+
 
 
 # Contacto
