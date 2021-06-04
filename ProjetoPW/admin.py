@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Usuario, Quizz, Pergunta, Resposta, Tentar, Tentativa
+from .models import Usuario
+#from .models import Quizz, Pergunta, Resposta
 
 
 # Register your models here.
 admin.site.register(Usuario)
-admin.site.register(Quizz)
+#admin.site.register(Quizz)

@@ -1,9 +1,11 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 
-from .models import Usuario, Quizz, Resposta, Pergunta, Tentar, Tentativa
-from .forms import UsuarioFormulario, QuizzFormulario, PerguntaFormulario
+from .models import Usuario
+#from .models import  Quizz, Resposta, Pergunta
+from .forms import UsuarioFormulario
+#from .forms QuizzFormulario, PerguntaFormulario
 
 
 # Create your views here.
@@ -68,9 +70,10 @@ def nomaPinteresse_page_view(request):
 
 
 #Quizz
+
 def quizz_page_view(request):
-    #context = {'ProjetoPW': Quizz.objects.all()}
-    return render (request, 'ProjetoPW/quizz.html') #, context
+    context = {'ProjetoPW': Quizz.objects.all()}
+    return render (request, 'ProjetoPW/quizz.html', context) #, context
 
 
 # Contacto

@@ -22,7 +22,7 @@ urlpatterns = [
     path('quizz', views.quizz_page_view, name='quizz'),
 
     # Celler
-    path('', views.cellerIntroducao_page_view, name='cellerIntroducao'),
+    path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),
     path('cellerCozinha', views.cellerCozinha_page_view, name='cellerCozinha'),
     path('cellerPinteresse', views.cellerPinteresse_page_view, name='cellerPinteresse'),
 
@@ -37,7 +37,7 @@ urlpatterns = [
     path('nomaPinteresse', views.nomaPinteresse_page_view, name='nomaPinteresse'),
 
     # Contacto
-    path('contacto', views.contacto_page_view, name='contacto'),
+    path('', views.contacto_page_view, name='contacto'),
     path('listar/', views.novo_contacto_view, name='listar'),
     path('edita/<int:usuario_id>', views.edita_contacto_view, name="edita"),
     path('apaga/<int:usuario_id>', views.apaga_contacto_view, name="apaga"),
