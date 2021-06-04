@@ -10,19 +10,19 @@ urlpatterns = [
     path('formulario/', views.formulario_page_view, name='formulario'),
 
     # Mapa
-    path('', views.mapa_page_view, name='mapa'),
+    path('mapa/', views.mapa_page_view, name='mapa'),
 
     # Informacao
     path('informacao', views.informcao_page_view, name='informacao'),
 
     # Index
-    path('index', views.index_page_view, name='index'),  # ERRO
+    path('index', views.index_page_view, name='index'),  # ERRO na página do mapa não mostra
 
     #Quizz
     path('quizz', views.quizz_page_view, name='quizz'),
 
     # Celler
-    path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),
+    path('', views.cellerIntroducao_page_view, name='cellerIntroducao'),
     path('cellerCozinha', views.cellerCozinha_page_view, name='cellerCozinha'),
     path('cellerPinteresse', views.cellerPinteresse_page_view, name='cellerPinteresse'),
 

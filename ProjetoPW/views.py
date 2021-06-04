@@ -2,8 +2,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import Usuario
-from .forms import UsuarioFormulario
+from .models import Usuario, Quizz, Resposta, Pergunta, Tentar, Tentativa
+from .forms import UsuarioFormulario, QuizzFormulario, PerguntaFormulario
 
 
 # Create your views here.
