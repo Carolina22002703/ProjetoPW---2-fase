@@ -25,7 +25,7 @@ class Quiz (models.Model):
     dificuldade = models.CharField(max_length=50, choices=OPCOES)
 
     def __str__(self):
-        return not self.nome + ' ' + self.topico
+        return self.nome
 
     def get_perguntas(self):
         return self.pergunta_set.all()
@@ -38,7 +38,7 @@ class Pergunta(models.Model):
     def __str__(self):
         return str(self.textoPergunta)
     def get_respostas(self):
-        return self.resposta_set.all()
+        return self.textoResposta_set.all()
 
 class Resposta(models.Model):
     textoResposta = models.CharField(max_length=50)
@@ -47,7 +47,7 @@ class Resposta(models.Model):
     criado = models.DateTimeField(auto_now_add="True")
 
     def __str__(self):
-        return f"Pergunta: {self.textoPergunta}, Resposta: {self.textoResposta}, Resposta correta {self.correta}"
+        return f"Resposta: {self.textoResposta}, Resposta correta {self.correta}"
 
 class Resultados(models.Model):
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
