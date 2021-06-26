@@ -37,7 +37,7 @@
 {% endblock body %}
 
 {% block header %}
-    <h1>Quizz</h1>
+    <h1>Pontuação</h1>
 {% endblock header %}
 
 {% block nav %}
@@ -51,9 +51,27 @@
 
 
 {% block main %}
-    {% for quizz in quizzes %}
+    {% if user.is_authenticated %}
+        {% if contagem == 0 %}
+            <p> Ainda não existem pontuações.</p>
+            <p> Por favor realize o Quizz &#128521;.</p>
 
-   {% endfor %}
+            {% for quizz in quizzes %}
+                {% for tentativa in tentativas %}
+                    {% if tentativa.usuario == request.user %}
+                        {% if tentativa.quizz == quizz %}
+                            {{ quizz.titulo }}
+                            {{ tentativa.pontos }}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+    {% else %}
+        <p>Para aceder às pontuações, necessita de fazer o login e efetuar o Quizz.</p>
+    {% endif %}
+
 {% endblock main %}
 
 {% block body2 %}

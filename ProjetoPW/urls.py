@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.urls import path
-
 from . import views
 
 app_name = "ProjetoPW"
@@ -13,13 +12,10 @@ urlpatterns = [
     path('mapa/', views.mapa_page_view, name='mapa'),
 
     # Informacao
-    path('informacao', views.informcao_page_view, name='informacao'),
+    path('informacao/', views.informcao_page_view, name='informacao'),
 
     # Index
-    path('index', views.index_page_view, name='index'),  # ERRO na página do mapa não mostra
-
-    #Quizz
-    path('quizz', views.quizz_page_view, name='quizz'),
+    path('index/', views.index_page_view, name='index'),  # ERRO na página do mapa não mostra
 
     # Celler
     path('cellerIntroducao', views.cellerIntroducao_page_view, name='cellerIntroducao'),

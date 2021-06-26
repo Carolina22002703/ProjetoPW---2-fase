@@ -620,3 +620,21 @@ flex-wrap: wrap;
       width: 100%;
     }
   }
+
+  /* Classe do Quizz */
+  .butao {
+    max-width: 94px;
+    background:blue;
+    color: white;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .sub-butao {
+    background: yellow;
+    color: white;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+  }

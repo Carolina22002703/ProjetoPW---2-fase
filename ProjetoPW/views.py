@@ -1,12 +1,12 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 from django.urls import reverse
 
 from .models import Usuario
-#from .models import  Quizz, Resposta, Pergunta
 from .forms import UsuarioFormulario
 #from .forms QuizzFormulario, PerguntaFormulario
 
+from django.views.generic import ListView
 
 # Create your views here.
 
@@ -67,13 +67,6 @@ def nomaCozinha_page_view(requeste):
 
 def nomaPinteresse_page_view(request):
     return render(request, 'ProjetoPW/nomaPinteresse.html')
-
-
-#Quizz
-
-def quizz_page_view(request):
-    context = {'ProjetoPW': Quizz.objects.all()}
-    return render (request, 'ProjetoPW/quizz.html', context) #, context
 
 
 # Contacto

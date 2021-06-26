@@ -1,0 +1,89 @@
+{% extends 'ProjetoPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoPW/images/quizz.jpg"%}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-size: 2vw;
+            font-family: 'Dela Gothic One', cursive;
+            color:rgb(202, 29, 29);
+        }
+        p{
+            text-align: center;
+        }
+        .nav{
+            background-color:rgb(10, 51, 90);
+        }
+        .footer{
+            background-color:rgb(10, 51, 90);
+        }
+        fieldset{
+            text-align: center;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <div class="parallax"></div>
+{% endblock body %}
+
+{% block header %}
+    <h1>Quizz</h1>
+{% endblock header %}
+
+{% block nav %}
+    <a href="{% url 'ProjetoPW:informacao' %}" target="_blank">&#10067; Informações </a>
+    <a href="{% url 'ProjetoPW:formulario' %}" target="_blank">&#128203; Formulário </a>
+    <a href="{% url 'ProjetoPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a>
+    <a href="{% url 'ProjetoPW:contacto' %}">📞 Contacto </a>
+    <b><a href="{% url 'ProjetoPW:quizz' %}">✍️ Quizz </a></b>
+    <a href="{% url 'ProjetoPW:index' %}" target="_blank">&#128281; Home </a>
+{% endblock nav %}
+
+
+{% block main %}
+    {% if user.is_authenticated %}
+        <h2> {{ quizz.0.titulo }}</h2>
+
+        <form action="{% url 'submeter' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{ quizz.0.id }}" name="quizz_id" id="quizz_id">
+
+            {% for pergunta in perguntas %}
+                <div> {{ pergunta.textoPergunta }}</div>
+
+                {% for resposta in pergunta.resposta.all %}
+                    <input name="{{pergunta.id}}"
+                           {% if resposta.correta %}
+                                value="{{ pergunta.pontos }}"
+                           {% else %}
+                                value = "0"
+                           {% endif%}
+                                type="radio" style="margin-right: 10%">
+                    {{ resposta.textoResposta}}
+                {% endfor %}
+            {% endfor %}
+
+            <div style="margin-top: 25px">
+                <input class="butao" type="submit" value="Submeter"> <a href="{% url 'pontuacao'%}" class="sub-botao">Ver Pontuação</a>
+            </div>
+        </form>
+
+    {% else %}
+        <h2> Para aceder ao quizz, necessita de fazer o login.</h2>
+    {% endif %}
+
+{% endblock main %}
+
+{% block body2 %}
+    <div class="parallax"></div>
+{% endblock body2 %}
